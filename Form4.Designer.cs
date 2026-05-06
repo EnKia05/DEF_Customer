@@ -276,9 +276,9 @@
             this.label6.ForeColor = System.Drawing.Color.Gray;
             this.label6.Location = new System.Drawing.Point(-3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 17);
+            this.label6.Size = new System.Drawing.Size(116, 17);
             this.label6.TabIndex = 4;
-            this.label6.Text = "Address";
+            this.label6.Text = "Drop-Off Address";
             // 
             // panel6
             // 
