@@ -16,7 +16,7 @@ namespace DEF_Customer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmBookPackage());
+            Application.Run(new frmFinalBooking());
         }
     }
 }
