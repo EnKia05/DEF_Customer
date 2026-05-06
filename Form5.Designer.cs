@@ -1,6 +1,6 @@
 ﻿namespace DEF_Customer
 {
-    partial class frmBookPackage
+    partial class frmBookDetails2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookPackage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookDetails2));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -639,7 +639,7 @@
             this.btnBookDelivery.Text = "Next";
             this.btnBookDelivery.UseVisualStyleBackColor = false;
             // 
-            // frmBookPackage
+            // frmBookDetails2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -647,7 +647,7 @@
             this.Controls.Add(this.btnBookDelivery);
             this.Controls.Add(this.pnlSender);
             this.Controls.Add(this.panel1);
-            this.Name = "frmBookPackage";
+            this.Name = "frmBookDetails2";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

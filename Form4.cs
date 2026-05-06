@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace DEF_Customer
 {
-    public partial class frmBookDetails : MetroForm
+    public partial class frmBookDetails1 : MetroForm
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -26,7 +26,7 @@ namespace DEF_Customer
                 int nHeightEllipse // height of ellipse (the roundness)
             );
 
-        public frmBookDetails()
+        public frmBookDetails1()
         {
             InitializeComponent();
             //The color for the upper part of the Form.
