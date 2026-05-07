@@ -618,7 +618,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSender.AutoSize = true;
             this.lblSender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSender.Location = new System.Drawing.Point(25, 18);
+            this.lblSender.Location = new System.Drawing.Point(307, 11);
             this.lblSender.Name = "lblSender";
             this.lblSender.Size = new System.Drawing.Size(293, 32);
             this.lblSender.TabIndex = 1;
