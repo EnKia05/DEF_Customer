@@ -78,6 +78,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblSender = new System.Windows.Forms.Label();
             this.btnBookDelivery = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -639,11 +640,26 @@
             this.btnBookDelivery.Text = "Next";
             this.btnBookDelivery.UseVisualStyleBackColor = false;
             // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Black;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(697, 646);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(140, 39);
+            this.button9.TabIndex = 13;
+            this.button9.Text = "Back";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // frmBookDetails2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.btnBookDelivery);
             this.Controls.Add(this.pnlSender);
             this.Controls.Add(this.panel1);
@@ -735,5 +751,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnBookDelivery;
+        private System.Windows.Forms.Button button9;
     }
 }
