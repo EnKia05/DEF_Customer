@@ -51,7 +51,20 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnlRecipient = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlSender = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,19 +74,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.pnlRecipient = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.btnBookDelivery = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -86,14 +86,14 @@
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.pnlRecipient.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.pnlSender.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.pnlRecipient.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -102,7 +102,7 @@
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(0, 29);
+            this.panel1.Location = new System.Drawing.Point(-1, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1082, 72);
             this.panel1.TabIndex = 4;
@@ -155,7 +155,7 @@
             this.panel2.Controls.Add(this.pnlRecipient);
             this.panel2.Controls.Add(this.pnlSender);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(111, 153);
+            this.panel2.Location = new System.Drawing.Point(111, 176);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(856, 462);
             this.panel2.TabIndex = 5;
@@ -328,6 +328,139 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Item Name";
             // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(58, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(293, 32);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Package Information";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlRecipient
+            // 
+            this.pnlRecipient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(224)))), ((int)(((byte)(232)))));
+            this.pnlRecipient.Controls.Add(this.label15);
+            this.pnlRecipient.Controls.Add(this.panel7);
+            this.pnlRecipient.Controls.Add(this.panel6);
+            this.pnlRecipient.Controls.Add(this.panel8);
+            this.pnlRecipient.Location = new System.Drawing.Point(430, 57);
+            this.pnlRecipient.Name = "pnlRecipient";
+            this.pnlRecipient.Size = new System.Drawing.Size(412, 201);
+            this.pnlRecipient.TabIndex = 7;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(52, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(304, 32);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Recipient Information";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.textBox6);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Location = new System.Drawing.Point(10, 147);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(392, 40);
+            this.panel7.TabIndex = 5;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox6.Location = new System.Drawing.Point(3, 17);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(388, 15);
+            this.textBox6.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(-3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(116, 17);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Drop-Off Address";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Controls.Add(this.textBox5);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Location = new System.Drawing.Point(10, 54);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(392, 40);
+            this.panel6.TabIndex = 5;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox5.Location = new System.Drawing.Point(3, 17);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(388, 15);
+            this.textBox5.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(-3, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Name";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.White;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Controls.Add(this.textBox4);
+            this.panel8.Controls.Add(this.label7);
+            this.panel8.Location = new System.Drawing.Point(10, 100);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(392, 40);
+            this.panel8.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox4.Location = new System.Drawing.Point(3, 17);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(388, 15);
+            this.textBox4.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Gray;
+            this.label7.Location = new System.Drawing.Point(-3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(119, 17);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Contact Number";
+            // 
             // pnlSender
             // 
             this.pnlSender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(224)))), ((int)(((byte)(232)))));
@@ -339,6 +472,20 @@
             this.pnlSender.Name = "pnlSender";
             this.pnlSender.Size = new System.Drawing.Size(412, 201);
             this.pnlSender.TabIndex = 6;
+            // 
+            // label14
+            // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(67, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(273, 32);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "Sender Information";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -433,153 +580,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Name";
             // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(58, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(293, 32);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Package Information";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.textBox4);
-            this.panel8.Controls.Add(this.label7);
-            this.panel8.Location = new System.Drawing.Point(10, 100);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(392, 40);
-            this.panel8.TabIndex = 4;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(-3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(119, 17);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Contact Number";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(3, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(388, 15);
-            this.textBox4.TabIndex = 4;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.textBox5);
-            this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(10, 54);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(392, 40);
-            this.panel6.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(-3, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Name";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox5.Location = new System.Drawing.Point(3, 17);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(388, 15);
-            this.textBox5.TabIndex = 4;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.textBox6);
-            this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(10, 147);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(392, 40);
-            this.panel7.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(-3, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 17);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Drop-Off Address";
-            // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox6.Location = new System.Drawing.Point(3, 17);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(388, 15);
-            this.textBox6.TabIndex = 4;
-            // 
-            // pnlRecipient
-            // 
-            this.pnlRecipient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(224)))), ((int)(((byte)(232)))));
-            this.pnlRecipient.Controls.Add(this.label15);
-            this.pnlRecipient.Controls.Add(this.panel7);
-            this.pnlRecipient.Controls.Add(this.panel6);
-            this.pnlRecipient.Controls.Add(this.panel8);
-            this.pnlRecipient.Location = new System.Drawing.Point(430, 57);
-            this.pnlRecipient.Name = "pnlRecipient";
-            this.pnlRecipient.Size = new System.Drawing.Size(412, 201);
-            this.pnlRecipient.TabIndex = 7;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(67, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(273, 32);
-            this.label14.TabIndex = 8;
-            this.label14.Text = "Sender Information";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(52, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(304, 32);
-            this.label15.TabIndex = 9;
-            this.label15.Text = "Recipient Information";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnBookDelivery
             // 
             this.btnBookDelivery.BackColor = System.Drawing.Color.HotPink;
@@ -587,7 +587,7 @@
             this.btnBookDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBookDelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBookDelivery.ForeColor = System.Drawing.Color.White;
-            this.btnBookDelivery.Location = new System.Drawing.Point(759, 621);
+            this.btnBookDelivery.Location = new System.Drawing.Point(758, 636);
             this.btnBookDelivery.Name = "btnBookDelivery";
             this.btnBookDelivery.Size = new System.Drawing.Size(195, 39);
             this.btnBookDelivery.TabIndex = 13;
@@ -621,6 +621,14 @@
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.pnlRecipient.ResumeLayout(false);
+            this.pnlRecipient.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.pnlSender.ResumeLayout(false);
             this.pnlSender.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -629,14 +637,6 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.pnlRecipient.ResumeLayout(false);
-            this.pnlRecipient.PerformLayout();
             this.ResumeLayout(false);
 
         }

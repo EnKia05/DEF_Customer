@@ -78,7 +78,7 @@
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(-1, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1082, 72);
             this.panel1.TabIndex = 2;
@@ -121,9 +121,9 @@
             this.pnlSender.Controls.Add(this.panel3);
             this.pnlSender.Controls.Add(this.panel2);
             this.pnlSender.Controls.Add(this.lblSender);
-            this.pnlSender.Location = new System.Drawing.Point(165, 147);
+            this.pnlSender.Location = new System.Drawing.Point(165, 176);
             this.pnlSender.Name = "pnlSender";
-            this.pnlSender.Size = new System.Drawing.Size(356, 441);
+            this.pnlSender.Size = new System.Drawing.Size(356, 411);
             this.pnlSender.TabIndex = 3;
             // 
             // panel4
@@ -244,9 +244,9 @@
             this.pnlRecipient.Controls.Add(this.panel6);
             this.pnlRecipient.Controls.Add(this.lblRecipient);
             this.pnlRecipient.Controls.Add(this.panel5);
-            this.pnlRecipient.Location = new System.Drawing.Point(555, 147);
+            this.pnlRecipient.Location = new System.Drawing.Point(555, 176);
             this.pnlRecipient.Name = "pnlRecipient";
-            this.pnlRecipient.Size = new System.Drawing.Size(356, 441);
+            this.pnlRecipient.Size = new System.Drawing.Size(356, 411);
             this.pnlRecipient.TabIndex = 4;
             // 
             // panel7

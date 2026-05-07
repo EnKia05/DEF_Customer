@@ -105,7 +105,7 @@
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Location = new System.Drawing.Point(-1, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1082, 72);
             this.panel1.TabIndex = 3;
@@ -143,6 +143,7 @@
             // 
             // pnlSender
             // 
+            this.pnlSender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlSender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(224)))), ((int)(((byte)(232)))));
             this.pnlSender.Controls.Add(this.panel10);
             this.pnlSender.Controls.Add(this.panel5);
@@ -150,13 +151,14 @@
             this.pnlSender.Controls.Add(this.panel3);
             this.pnlSender.Controls.Add(this.panel2);
             this.pnlSender.Controls.Add(this.lblSender);
-            this.pnlSender.Location = new System.Drawing.Point(94, 138);
+            this.pnlSender.Location = new System.Drawing.Point(94, 176);
             this.pnlSender.Name = "pnlSender";
-            this.pnlSender.Size = new System.Drawing.Size(889, 492);
+            this.pnlSender.Size = new System.Drawing.Size(889, 454);
             this.pnlSender.TabIndex = 4;
             // 
             // panel10
             // 
+            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel10.BackColor = System.Drawing.Color.White;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.Controls.Add(this.panel11);
@@ -164,7 +166,7 @@
             this.panel10.Controls.Add(this.panel13);
             this.panel10.Controls.Add(this.panel14);
             this.panel10.Controls.Add(this.label21);
-            this.panel10.Location = new System.Drawing.Point(330, 284);
+            this.panel10.Location = new System.Drawing.Point(330, 244);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(546, 187);
             this.panel10.TabIndex = 13;
@@ -321,6 +323,7 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.panel9);
@@ -328,7 +331,7 @@
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(330, 91);
+            this.panel5.Location = new System.Drawing.Point(330, 51);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(546, 187);
             this.panel5.TabIndex = 12;
@@ -522,11 +525,12 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(14, 207);
+            this.panel4.Location = new System.Drawing.Point(15, 145);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(308, 54);
             this.panel4.TabIndex = 6;
@@ -552,11 +556,12 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBox2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(14, 150);
+            this.panel3.Location = new System.Drawing.Point(15, 97);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(308, 40);
             this.panel3.TabIndex = 5;
@@ -583,11 +588,12 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(14, 91);
+            this.panel2.Location = new System.Drawing.Point(16, 51);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(308, 40);
             this.panel2.TabIndex = 4;
@@ -614,12 +620,11 @@
             // 
             // lblSender
             // 
-            this.lblSender.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblSender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSender.AutoSize = true;
             this.lblSender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSender.Location = new System.Drawing.Point(307, 11);
+            this.lblSender.Location = new System.Drawing.Point(307, 7);
             this.lblSender.Name = "lblSender";
             this.lblSender.Size = new System.Drawing.Size(293, 32);
             this.lblSender.TabIndex = 1;
