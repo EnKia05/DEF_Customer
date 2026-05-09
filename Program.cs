@@ -14,9 +14,15 @@ namespace DEF_Customer
         [STAThread]
         static void Main()
         {
+            // This is your working DPI fix for .NET Framework!
+            if (Environment.OSVersion.Version.Major >= 6) { SetProcessDPIAware(); }
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmBookPayment());
         }
+
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
     }
 }

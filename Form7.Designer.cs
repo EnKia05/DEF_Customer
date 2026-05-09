@@ -316,7 +316,6 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 60);
@@ -359,7 +358,6 @@
             // 
             // lblSender
             // 
-            this.lblSender.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSender.AutoSize = true;
             this.lblSender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSender.Location = new System.Drawing.Point(307, 6);
@@ -371,8 +369,8 @@
             // 
             // frmBookPayment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1080, 720);
             this.Controls.Add(this.pnlSender);
             this.Controls.Add(this.panel1);
