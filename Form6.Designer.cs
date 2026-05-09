@@ -591,7 +591,7 @@
             this.btnBookDelivery.Name = "btnBookDelivery";
             this.btnBookDelivery.Size = new System.Drawing.Size(195, 39);
             this.btnBookDelivery.TabIndex = 13;
-            this.btnBookDelivery.Text = "Confirm Order";
+            this.btnBookDelivery.Text = "Confirm Details";
             this.btnBookDelivery.UseVisualStyleBackColor = false;
             // 
             // frmBookingSummary
