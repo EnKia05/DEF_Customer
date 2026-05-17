@@ -30,44 +30,45 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookDetails2));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button10 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlSender = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.pnlVehicleType = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnTruck = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnCar = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnMotorcycle = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnBicycle = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlPackageSize = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSizeXL = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSizeL = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSizeM = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSizeS = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbItemType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -78,17 +79,16 @@
             this.lblSender = new System.Windows.Forms.Label();
             this.btnBookDelivery2 = new System.Windows.Forms.Button();
             this.btnBookDelivery2Back = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlSender.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.pnlVehicleType.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pnlPackageSize.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -108,6 +108,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1082, 72);
             this.panel1.TabIndex = 3;
+            // 
+            // button10
+            // 
+            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(987, 21);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(30, 30);
+            this.button10.TabIndex = 15;
+            this.button10.UseVisualStyleBackColor = true;
             // 
             // pictureBox6
             // 
@@ -134,8 +146,8 @@
             // 
             this.pnlSender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlSender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(224)))), ((int)(((byte)(232)))));
-            this.pnlSender.Controls.Add(this.panel10);
-            this.pnlSender.Controls.Add(this.panel5);
+            this.pnlSender.Controls.Add(this.pnlVehicleType);
+            this.pnlSender.Controls.Add(this.pnlPackageSize);
             this.pnlSender.Controls.Add(this.panel4);
             this.pnlSender.Controls.Add(this.panel3);
             this.pnlSender.Controls.Add(this.panel2);
@@ -145,25 +157,25 @@
             this.pnlSender.Size = new System.Drawing.Size(889, 454);
             this.pnlSender.TabIndex = 4;
             // 
-            // panel10
+            // pnlVehicleType
             // 
-            this.panel10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.panel11);
-            this.panel10.Controls.Add(this.panel12);
-            this.panel10.Controls.Add(this.panel13);
-            this.panel10.Controls.Add(this.panel14);
-            this.panel10.Controls.Add(this.label21);
-            this.panel10.Location = new System.Drawing.Point(330, 244);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(546, 187);
-            this.panel10.TabIndex = 13;
+            this.pnlVehicleType.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pnlVehicleType.BackColor = System.Drawing.Color.White;
+            this.pnlVehicleType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlVehicleType.Controls.Add(this.panel11);
+            this.pnlVehicleType.Controls.Add(this.panel12);
+            this.pnlVehicleType.Controls.Add(this.panel13);
+            this.pnlVehicleType.Controls.Add(this.panel14);
+            this.pnlVehicleType.Controls.Add(this.label21);
+            this.pnlVehicleType.Location = new System.Drawing.Point(330, 244);
+            this.pnlVehicleType.Name = "pnlVehicleType";
+            this.pnlVehicleType.Size = new System.Drawing.Size(546, 187);
+            this.pnlVehicleType.TabIndex = 13;
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.label14);
-            this.panel11.Controls.Add(this.button5);
+            this.panel11.Controls.Add(this.btnTruck);
             this.panel11.Location = new System.Drawing.Point(406, 20);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(125, 149);
@@ -180,22 +192,23 @@
             this.label14.TabIndex = 8;
             this.label14.Text = "Truck";
             // 
-            // button5
+            // btnTruck
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.HotPink;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(12, 7);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 100);
-            this.button5.TabIndex = 7;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnTruck.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTruck.ForeColor = System.Drawing.Color.HotPink;
+            this.btnTruck.Image = ((System.Drawing.Image)(resources.GetObject("btnTruck.Image")));
+            this.btnTruck.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTruck.Location = new System.Drawing.Point(12, 7);
+            this.btnTruck.Name = "btnTruck";
+            this.btnTruck.Size = new System.Drawing.Size(100, 100);
+            this.btnTruck.TabIndex = 7;
+            this.btnTruck.UseVisualStyleBackColor = true;
+            this.btnTruck.Click += new System.EventHandler(this.btnTruck_Click);
             // 
             // panel12
             // 
             this.panel12.Controls.Add(this.label16);
-            this.panel12.Controls.Add(this.button6);
+            this.panel12.Controls.Add(this.btnCar);
             this.panel12.Location = new System.Drawing.Point(275, 20);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(125, 149);
@@ -212,22 +225,23 @@
             this.label16.TabIndex = 8;
             this.label16.Text = "Car";
             // 
-            // button6
+            // btnCar
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.HotPink;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.Location = new System.Drawing.Point(12, 7);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 100);
-            this.button6.TabIndex = 7;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCar.ForeColor = System.Drawing.Color.HotPink;
+            this.btnCar.Image = ((System.Drawing.Image)(resources.GetObject("btnCar.Image")));
+            this.btnCar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCar.Location = new System.Drawing.Point(12, 7);
+            this.btnCar.Name = "btnCar";
+            this.btnCar.Size = new System.Drawing.Size(100, 100);
+            this.btnCar.TabIndex = 7;
+            this.btnCar.UseVisualStyleBackColor = true;
+            this.btnCar.Click += new System.EventHandler(this.btnCar_Click);
             // 
             // panel13
             // 
             this.panel13.Controls.Add(this.label18);
-            this.panel13.Controls.Add(this.button7);
+            this.panel13.Controls.Add(this.btnMotorcycle);
             this.panel13.Location = new System.Drawing.Point(144, 20);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(125, 149);
@@ -244,23 +258,24 @@
             this.label18.TabIndex = 8;
             this.label18.Text = "Motorcycle";
             // 
-            // button7
+            // btnMotorcycle
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.HotPink;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.Location = new System.Drawing.Point(12, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 100);
-            this.button7.TabIndex = 7;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnMotorcycle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMotorcycle.ForeColor = System.Drawing.Color.HotPink;
+            this.btnMotorcycle.Image = ((System.Drawing.Image)(resources.GetObject("btnMotorcycle.Image")));
+            this.btnMotorcycle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMotorcycle.Location = new System.Drawing.Point(12, 7);
+            this.btnMotorcycle.Name = "btnMotorcycle";
+            this.btnMotorcycle.Size = new System.Drawing.Size(100, 100);
+            this.btnMotorcycle.TabIndex = 7;
+            this.btnMotorcycle.UseVisualStyleBackColor = true;
+            this.btnMotorcycle.Click += new System.EventHandler(this.btnMotorcycle_Click);
             // 
             // panel14
             // 
             this.panel14.Controls.Add(this.label19);
             this.panel14.Controls.Add(this.label20);
-            this.panel14.Controls.Add(this.button8);
+            this.panel14.Controls.Add(this.btnBicycle);
             this.panel14.Location = new System.Drawing.Point(13, 20);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(125, 149);
@@ -287,17 +302,18 @@
             this.label20.TabIndex = 8;
             this.label20.Text = "Bicycle";
             // 
-            // button8
+            // btnBicycle
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.HotPink;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.Location = new System.Drawing.Point(12, 7);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(100, 100);
-            this.button8.TabIndex = 7;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnBicycle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBicycle.ForeColor = System.Drawing.Color.HotPink;
+            this.btnBicycle.Image = ((System.Drawing.Image)(resources.GetObject("btnBicycle.Image")));
+            this.btnBicycle.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBicycle.Location = new System.Drawing.Point(12, 7);
+            this.btnBicycle.Name = "btnBicycle";
+            this.btnBicycle.Size = new System.Drawing.Size(100, 100);
+            this.btnBicycle.TabIndex = 7;
+            this.btnBicycle.UseVisualStyleBackColor = true;
+            this.btnBicycle.Click += new System.EventHandler(this.btnBicycle_Click);
             // 
             // label21
             // 
@@ -310,26 +326,26 @@
             this.label21.TabIndex = 5;
             this.label21.Text = "Vehicle Type";
             // 
-            // panel5
+            // pnlPackageSize
             // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.panel9);
-            this.panel5.Controls.Add(this.panel8);
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(330, 51);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(546, 187);
-            this.panel5.TabIndex = 12;
+            this.pnlPackageSize.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pnlPackageSize.BackColor = System.Drawing.Color.White;
+            this.pnlPackageSize.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlPackageSize.Controls.Add(this.panel9);
+            this.pnlPackageSize.Controls.Add(this.panel8);
+            this.pnlPackageSize.Controls.Add(this.panel7);
+            this.pnlPackageSize.Controls.Add(this.panel6);
+            this.pnlPackageSize.Controls.Add(this.label4);
+            this.pnlPackageSize.Location = new System.Drawing.Point(330, 51);
+            this.pnlPackageSize.Name = "pnlPackageSize";
+            this.pnlPackageSize.Size = new System.Drawing.Size(546, 187);
+            this.pnlPackageSize.TabIndex = 12;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label11);
             this.panel9.Controls.Add(this.label12);
-            this.panel9.Controls.Add(this.button4);
+            this.panel9.Controls.Add(this.btnSizeXL);
             this.panel9.Location = new System.Drawing.Point(406, 20);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(125, 149);
@@ -357,23 +373,24 @@
             this.label12.TabIndex = 8;
             this.label12.Text = "25.1 kg – 50.0 kg+";
             // 
-            // button4
+            // btnSizeXL
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.HotPink;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(12, 7);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 100);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "XL";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSizeXL.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSizeXL.ForeColor = System.Drawing.Color.HotPink;
+            this.btnSizeXL.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSizeXL.Location = new System.Drawing.Point(12, 7);
+            this.btnSizeXL.Name = "btnSizeXL";
+            this.btnSizeXL.Size = new System.Drawing.Size(100, 100);
+            this.btnSizeXL.TabIndex = 7;
+            this.btnSizeXL.Text = "XL";
+            this.btnSizeXL.UseVisualStyleBackColor = true;
+            this.btnSizeXL.Click += new System.EventHandler(this.btnSizeXL_Click);
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.label9);
             this.panel8.Controls.Add(this.label10);
-            this.panel8.Controls.Add(this.button3);
+            this.panel8.Controls.Add(this.btnSizeL);
             this.panel8.Location = new System.Drawing.Point(275, 20);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(125, 149);
@@ -401,23 +418,24 @@
             this.label10.TabIndex = 8;
             this.label10.Text = "10.1 kg – 25.0 kg";
             // 
-            // button3
+            // btnSizeL
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.HotPink;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(12, 7);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 100);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "L";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnSizeL.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSizeL.ForeColor = System.Drawing.Color.HotPink;
+            this.btnSizeL.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSizeL.Location = new System.Drawing.Point(12, 7);
+            this.btnSizeL.Name = "btnSizeL";
+            this.btnSizeL.Size = new System.Drawing.Size(100, 100);
+            this.btnSizeL.TabIndex = 7;
+            this.btnSizeL.Text = "L";
+            this.btnSizeL.UseVisualStyleBackColor = true;
+            this.btnSizeL.Click += new System.EventHandler(this.btnSizeL_Click);
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label5);
             this.panel7.Controls.Add(this.label8);
-            this.panel7.Controls.Add(this.button2);
+            this.panel7.Controls.Add(this.btnSizeM);
             this.panel7.Location = new System.Drawing.Point(144, 20);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(125, 149);
@@ -445,23 +463,24 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "3.1 kg – 10.0 kg";
             // 
-            // button2
+            // btnSizeM
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.HotPink;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(12, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 100);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "M";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSizeM.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSizeM.ForeColor = System.Drawing.Color.HotPink;
+            this.btnSizeM.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSizeM.Location = new System.Drawing.Point(12, 7);
+            this.btnSizeM.Name = "btnSizeM";
+            this.btnSizeM.Size = new System.Drawing.Size(100, 100);
+            this.btnSizeM.TabIndex = 7;
+            this.btnSizeM.Text = "M";
+            this.btnSizeM.UseVisualStyleBackColor = true;
+            this.btnSizeM.Click += new System.EventHandler(this.btnSizeM_Click);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.btnSizeS);
             this.panel6.Location = new System.Drawing.Point(13, 20);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(125, 149);
@@ -489,17 +508,19 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "0.1 kg - 3.0 kg";
             // 
-            // button1
+            // btnSizeS
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.HotPink;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(12, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 100);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "S";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSizeS.BackColor = System.Drawing.Color.White;
+            this.btnSizeS.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSizeS.ForeColor = System.Drawing.Color.HotPink;
+            this.btnSizeS.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSizeS.Location = new System.Drawing.Point(12, 7);
+            this.btnSizeS.Name = "btnSizeS";
+            this.btnSizeS.Size = new System.Drawing.Size(100, 100);
+            this.btnSizeS.TabIndex = 7;
+            this.btnSizeS.Text = "S";
+            this.btnSizeS.UseVisualStyleBackColor = false;
+            this.btnSizeS.Click += new System.EventHandler(this.btnSizeS_Click);
             // 
             // label4
             // 
@@ -517,20 +538,20 @@
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.cmbItemType);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(15, 145);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(308, 54);
             this.panel4.TabIndex = 6;
             // 
-            // comboBox1
+            // cmbItemType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 24);
-            this.comboBox1.TabIndex = 7;
+            this.cmbItemType.FormattingEnabled = true;
+            this.cmbItemType.Location = new System.Drawing.Point(3, 20);
+            this.cmbItemType.Name = "cmbItemType";
+            this.cmbItemType.Size = new System.Drawing.Size(300, 24);
+            this.cmbItemType.TabIndex = 7;
             // 
             // label3
             // 
@@ -650,18 +671,6 @@
             this.btnBookDelivery2Back.UseVisualStyleBackColor = false;
             this.btnBookDelivery2Back.Click += new System.EventHandler(this.btnBookDelivery2Back_Click);
             // 
-            // button10
-            // 
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Location = new System.Drawing.Point(987, 21);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(30, 30);
-            this.button10.TabIndex = 15;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
             // frmBookDetails2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -672,13 +681,14 @@
             this.Controls.Add(this.pnlSender);
             this.Controls.Add(this.panel1);
             this.Name = "frmBookDetails2";
+            this.Load += new System.EventHandler(this.frmBookDetails2_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlSender.ResumeLayout(false);
             this.pnlSender.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.pnlVehicleType.ResumeLayout(false);
+            this.pnlVehicleType.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
@@ -687,8 +697,8 @@
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.pnlPackageSize.ResumeLayout(false);
+            this.pnlPackageSize.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -722,39 +732,39 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblSender;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ComboBox cmbItemType;
+        private System.Windows.Forms.Panel pnlPackageSize;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSizeS;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSizeXL;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSizeL;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSizeM;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pnlVehicleType;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnTruck;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnCar;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnMotorcycle;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnBicycle;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button btnBookDelivery2;
         private System.Windows.Forms.Button btnBookDelivery2Back;
