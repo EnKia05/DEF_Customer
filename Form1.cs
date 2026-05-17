@@ -16,7 +16,11 @@ namespace DEF_Customer
     {
         // Your precise connection string matching your environment
         private string connectionString = @"Server=AIKENDAVE\SQLEXPRESS; Database=DEF_DeliveryDB; Integrated Security=True; TrustServerCertificate=True;";
-        public static int LoggedInCustID { get; set; }
+
+        // --- CLEANED GLOBAL SESSION SLOTS ---
+        public static int LoggedInCustID;
+        public static string LoggedInCustName = "";
+        public static string LoggedInCustContact = "";
 
         public frmLogIn()
         {
@@ -51,36 +55,41 @@ namespace DEF_Customer
                 return;
             }
 
-            // 3. SQL Query: Count how many matching records exist
-            string query = "SELECT custID FROM CUSTOMER WHERE custEmail = @custEmail AND custPassword = @custPassword;";
+            // 3. UPDATED SQL QUERY: Retrieve all required session fields from CUSTOMER
+            string query = "SELECT custID, custFullName, custcontact FROM CUSTOMER WHERE custEmail = @custEmail AND custPassword = @custPassword;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    command.Parameters.AddWithValue("@custEmail", txtEmail.Text.Trim());
-                    command.Parameters.AddWithValue("@custPassword", txtPassword.Text.Trim());
+                    command.Parameters.AddWithValue("@custEmail", email);
+                    command.Parameters.AddWithValue("@custPassword", password);
 
                     try
                     {
                         connection.Open();
-                        object result = command.ExecuteScalar();
 
-                        if (result != null) // If a match is found
+                        // Using SqlDataReader instead of ExecuteScalar to fetch multiple data columns seamlessly
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            // Save the ID to our memory slot
-                            LoggedInCustID = Convert.ToInt32(result);
+                            if (reader.Read()) // If a matching record is found
+                            {
+                                // Save the pulled database records into our global application memory slots
+                                LoggedInCustID = Convert.ToInt32(reader["custID"]);
+                                LoggedInCustName = reader["custFullName"].ToString();
+                                LoggedInCustContact = reader["custcontact"].ToString();
 
-                            MessageBox.Show("Login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Proceed cleanly to your Home form
-                            frmHome homeForm = new frmHome();
-                            homeForm.Show();
-                            this.Hide();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Invalid Email or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                // Proceed cleanly to your Home form
+                                frmHome homeForm = new frmHome();
+                                homeForm.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Invalid Email or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
                     }
                     catch (Exception ex)
