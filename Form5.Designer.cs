@@ -76,8 +76,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSender = new System.Windows.Forms.Label();
-            this.btnBookDelivery = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnBookDelivery2 = new System.Windows.Forms.Button();
+            this.btnBookDelivery2Back = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -620,33 +620,35 @@
             this.lblSender.Text = "Package Information";
             this.lblSender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnBookDelivery
+            // btnBookDelivery2
             // 
-            this.btnBookDelivery.BackColor = System.Drawing.Color.HotPink;
-            this.btnBookDelivery.FlatAppearance.BorderSize = 0;
-            this.btnBookDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBookDelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookDelivery.ForeColor = System.Drawing.Color.White;
-            this.btnBookDelivery.Location = new System.Drawing.Point(843, 646);
-            this.btnBookDelivery.Name = "btnBookDelivery";
-            this.btnBookDelivery.Size = new System.Drawing.Size(140, 39);
-            this.btnBookDelivery.TabIndex = 12;
-            this.btnBookDelivery.Text = "Next";
-            this.btnBookDelivery.UseVisualStyleBackColor = false;
+            this.btnBookDelivery2.BackColor = System.Drawing.Color.HotPink;
+            this.btnBookDelivery2.FlatAppearance.BorderSize = 0;
+            this.btnBookDelivery2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookDelivery2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookDelivery2.ForeColor = System.Drawing.Color.White;
+            this.btnBookDelivery2.Location = new System.Drawing.Point(843, 646);
+            this.btnBookDelivery2.Name = "btnBookDelivery2";
+            this.btnBookDelivery2.Size = new System.Drawing.Size(140, 39);
+            this.btnBookDelivery2.TabIndex = 12;
+            this.btnBookDelivery2.Text = "Next";
+            this.btnBookDelivery2.UseVisualStyleBackColor = false;
+            this.btnBookDelivery2.Click += new System.EventHandler(this.btnBookDelivery2_Click);
             // 
-            // button9
+            // btnBookDelivery2Back
             // 
-            this.button9.BackColor = System.Drawing.Color.Black;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(697, 646);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(140, 39);
-            this.button9.TabIndex = 13;
-            this.button9.Text = "Back";
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnBookDelivery2Back.BackColor = System.Drawing.Color.Black;
+            this.btnBookDelivery2Back.FlatAppearance.BorderSize = 0;
+            this.btnBookDelivery2Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookDelivery2Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookDelivery2Back.ForeColor = System.Drawing.Color.White;
+            this.btnBookDelivery2Back.Location = new System.Drawing.Point(697, 646);
+            this.btnBookDelivery2Back.Name = "btnBookDelivery2Back";
+            this.btnBookDelivery2Back.Size = new System.Drawing.Size(140, 39);
+            this.btnBookDelivery2Back.TabIndex = 13;
+            this.btnBookDelivery2Back.Text = "Back";
+            this.btnBookDelivery2Back.UseVisualStyleBackColor = false;
+            this.btnBookDelivery2Back.Click += new System.EventHandler(this.btnBookDelivery2Back_Click);
             // 
             // button10
             // 
@@ -665,8 +667,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.btnBookDelivery);
+            this.Controls.Add(this.btnBookDelivery2Back);
+            this.Controls.Add(this.btnBookDelivery2);
             this.Controls.Add(this.pnlSender);
             this.Controls.Add(this.panel1);
             this.Name = "frmBookDetails2";
@@ -754,8 +756,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button btnBookDelivery;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnBookDelivery2;
+        private System.Windows.Forms.Button btnBookDelivery2Back;
         private System.Windows.Forms.Button button10;
     }
 }

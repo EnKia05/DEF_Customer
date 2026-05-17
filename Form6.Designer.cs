@@ -73,7 +73,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBookDelivery = new System.Windows.Forms.Button();
+            this.btnBookDelivery3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -569,19 +569,20 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Name";
             // 
-            // btnBookDelivery
+            // btnBookDelivery3
             // 
-            this.btnBookDelivery.BackColor = System.Drawing.Color.HotPink;
-            this.btnBookDelivery.FlatAppearance.BorderSize = 0;
-            this.btnBookDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBookDelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookDelivery.ForeColor = System.Drawing.Color.White;
-            this.btnBookDelivery.Location = new System.Drawing.Point(758, 636);
-            this.btnBookDelivery.Name = "btnBookDelivery";
-            this.btnBookDelivery.Size = new System.Drawing.Size(195, 39);
-            this.btnBookDelivery.TabIndex = 13;
-            this.btnBookDelivery.Text = "Confirm Details";
-            this.btnBookDelivery.UseVisualStyleBackColor = false;
+            this.btnBookDelivery3.BackColor = System.Drawing.Color.HotPink;
+            this.btnBookDelivery3.FlatAppearance.BorderSize = 0;
+            this.btnBookDelivery3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBookDelivery3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBookDelivery3.ForeColor = System.Drawing.Color.White;
+            this.btnBookDelivery3.Location = new System.Drawing.Point(758, 636);
+            this.btnBookDelivery3.Name = "btnBookDelivery3";
+            this.btnBookDelivery3.Size = new System.Drawing.Size(195, 39);
+            this.btnBookDelivery3.TabIndex = 13;
+            this.btnBookDelivery3.Text = "Confirm Details";
+            this.btnBookDelivery3.UseVisualStyleBackColor = false;
+            this.btnBookDelivery3.Click += new System.EventHandler(this.btnBookDelivery3_Click);
             // 
             // button1
             // 
@@ -600,7 +601,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.btnBookDelivery);
+            this.Controls.Add(this.btnBookDelivery3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmBookingSummary";
@@ -687,7 +688,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnBookDelivery;
+        private System.Windows.Forms.Button btnBookDelivery3;
         private System.Windows.Forms.Button button1;
     }
 }

@@ -138,6 +138,7 @@
             this.btnBookDelivery.TabIndex = 10;
             this.btnBookDelivery.Text = "Book Delivery";
             this.btnBookDelivery.UseVisualStyleBackColor = false;
+            this.btnBookDelivery.Click += new System.EventHandler(this.btnBookDelivery_Click);
             // 
             // pictureBox3
             // 

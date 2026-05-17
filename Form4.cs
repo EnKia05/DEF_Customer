@@ -98,5 +98,12 @@ namespace DEF_Customer
                 }
             }
         }
+
+        private void btnBookDelivery1_Click(object sender, EventArgs e)
+        {
+            frmBookDetails2 newWindow = new frmBookDetails2();
+            newWindow.Show();
+            this.Hide();
+        }
     }
 }

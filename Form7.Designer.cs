@@ -33,7 +33,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlSender = new System.Windows.Forms.Panel();
-            this.btnBookDelivery = new System.Windows.Forms.Button();
+            this.btnSubmitOrder = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
@@ -107,7 +107,7 @@
             // 
             this.pnlSender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlSender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(224)))), ((int)(((byte)(232)))));
-            this.pnlSender.Controls.Add(this.btnBookDelivery);
+            this.pnlSender.Controls.Add(this.btnSubmitOrder);
             this.pnlSender.Controls.Add(this.panel2);
             this.pnlSender.Controls.Add(this.label2);
             this.pnlSender.Controls.Add(this.label1);
@@ -118,20 +118,21 @@
             this.pnlSender.Size = new System.Drawing.Size(889, 520);
             this.pnlSender.TabIndex = 5;
             // 
-            // btnBookDelivery
+            // btnSubmitOrder
             // 
-            this.btnBookDelivery.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnBookDelivery.BackColor = System.Drawing.Color.HotPink;
-            this.btnBookDelivery.FlatAppearance.BorderSize = 0;
-            this.btnBookDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBookDelivery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookDelivery.ForeColor = System.Drawing.Color.White;
-            this.btnBookDelivery.Location = new System.Drawing.Point(28, 174);
-            this.btnBookDelivery.Name = "btnBookDelivery";
-            this.btnBookDelivery.Size = new System.Drawing.Size(195, 39);
-            this.btnBookDelivery.TabIndex = 14;
-            this.btnBookDelivery.Text = "Submit Order";
-            this.btnBookDelivery.UseVisualStyleBackColor = false;
+            this.btnSubmitOrder.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnSubmitOrder.BackColor = System.Drawing.Color.HotPink;
+            this.btnSubmitOrder.FlatAppearance.BorderSize = 0;
+            this.btnSubmitOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmitOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmitOrder.ForeColor = System.Drawing.Color.White;
+            this.btnSubmitOrder.Location = new System.Drawing.Point(28, 174);
+            this.btnSubmitOrder.Name = "btnSubmitOrder";
+            this.btnSubmitOrder.Size = new System.Drawing.Size(195, 39);
+            this.btnSubmitOrder.TabIndex = 14;
+            this.btnSubmitOrder.Text = "Submit Order";
+            this.btnSubmitOrder.UseVisualStyleBackColor = false;
+            this.btnSubmitOrder.Click += new System.EventHandler(this.btnSubmitOrder_Click);
             // 
             // panel2
             // 
@@ -438,7 +439,7 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnBookDelivery;
+        private System.Windows.Forms.Button btnSubmitOrder;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox textBox1;

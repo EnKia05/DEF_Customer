@@ -19,5 +19,19 @@ namespace DEF_Customer
             //The color for the upper part of the Form.
             this.Style = MetroFramework.MetroColorStyle.Pink;
         }
+
+        private void btnBookDelivery2_Click(object sender, EventArgs e)
+        {
+            frmBookingSummary newWindow = new frmBookingSummary();
+            newWindow.Show();
+            this.Hide();
+        }
+
+        private void btnBookDelivery2Back_Click(object sender, EventArgs e)
+        {
+            frmBookDetails1 newWindow = new frmBookDetails1();
+            newWindow.Show();
+            this.Hide();
+        }
     }
 }

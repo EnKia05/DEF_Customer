@@ -31,5 +31,12 @@ namespace DEF_Customer
         {
 
         }
+
+        private void btnBookDelivery_Click(object sender, EventArgs e)
+        {
+            frmBookDetails1 newWindow = new frmBookDetails1();
+            newWindow.Show();
+            this.Hide();
+        }
     }
 }
