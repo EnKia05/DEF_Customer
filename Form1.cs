@@ -16,6 +16,7 @@ namespace DEF_Customer
     {
         // Your precise connection string matching your environment
         private string connectionString = @"Server=AIKENDAVE\SQLEXPRESS; Database=DEF_DeliveryDB; Integrated Security=True; TrustServerCertificate=True;";
+        public static int LoggedInCustID { get; set; }
 
         public frmLogIn()
         {
@@ -51,51 +52,40 @@ namespace DEF_Customer
             }
 
             // 3. SQL Query: Count how many matching records exist
-            string query = @"SELECT COUNT(1) FROM CUSTOMER 
-                             WHERE custEmail = @custEmail AND custPassword = @custPassword;";
+            string query = "SELECT custID FROM CUSTOMER WHERE custEmail = @custEmail AND custPassword = @custPassword;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    // Securely bind the user inputs to your parameters
-                    command.Parameters.AddWithValue("@custEmail", email);
-                    command.Parameters.AddWithValue("@custPassword", password);
+                    command.Parameters.AddWithValue("@custEmail", txtEmail.Text.Trim());
+                    command.Parameters.AddWithValue("@custPassword", txtPassword.Text.Trim());
 
                     try
                     {
                         connection.Open();
+                        object result = command.ExecuteScalar();
 
-                        // ExecuteScalar returns the first column of the first row (the count)
-                        int userExists = Convert.ToInt32(command.ExecuteScalar());
-
-                        if (userExists == 1)
+                        if (result != null) // If a match is found
                         {
-                            // Success! Credentials match perfectly
-                            MessageBox.Show("Login successful! Welcome to DEF Delivery Services. 🚀",
-                                            "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            // Save the ID to our memory slot
+                            LoggedInCustID = Convert.ToInt32(result);
 
-                            // Open the next form (assuming it's named frmHome)
-                            frmHome homePage = new frmHome();
-                            homePage.Show();
+                            MessageBox.Show("Login successful!", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Hide or Close this login screen
+                            // Proceed cleanly to your Home form
+                            frmHome homeForm = new frmHome();
+                            homeForm.Show();
                             this.Hide();
                         }
                         else
                         {
-                            // Security Best Practice: Don't specify if the email or password was the wrong one
-                            MessageBox.Show("Invalid Email or Password. Please try again.",
-                                            "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                            txtPassword.Clear();
-                            txtPassword.Focus();
+                            MessageBox.Show("Invalid Email or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"An unexpected error occurred: {ex.Message}",
-                                        "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Error: {ex.Message}");
                     }
                 }
             }

@@ -30,32 +30,32 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookDetails1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnlSender = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPickUp = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtContact = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSender = new System.Windows.Forms.Label();
             this.pnlRecipient = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtDropOff = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtRecipientName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblRecipient = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtRecipientContact = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnBookDelivery1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -79,6 +79,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1082, 72);
             this.panel1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(987, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 15;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox6
             // 
@@ -117,21 +129,21 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.txtPickUp);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(14, 307);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(323, 40);
             this.panel4.TabIndex = 6;
             // 
-            // textBox3
+            // txtPickUp
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(3, 17);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(388, 15);
-            this.textBox3.TabIndex = 4;
+            this.txtPickUp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPickUp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPickUp.Location = new System.Drawing.Point(3, 17);
+            this.txtPickUp.Name = "txtPickUp";
+            this.txtPickUp.Size = new System.Drawing.Size(388, 15);
+            this.txtPickUp.TabIndex = 4;
             // 
             // label3
             // 
@@ -148,21 +160,22 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtContact);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(14, 195);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(323, 40);
             this.panel3.TabIndex = 5;
             // 
-            // textBox2
+            // txtContact
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(3, 17);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(388, 15);
-            this.textBox2.TabIndex = 4;
+            this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtContact.Location = new System.Drawing.Point(3, 17);
+            this.txtContact.Name = "txtContact";
+            this.txtContact.ReadOnly = true;
+            this.txtContact.Size = new System.Drawing.Size(388, 15);
+            this.txtContact.TabIndex = 4;
             // 
             // label1
             // 
@@ -179,21 +192,22 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtFullName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(14, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(323, 40);
             this.panel2.TabIndex = 4;
             // 
-            // textBox1
+            // txtFullName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(3, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 15);
-            this.textBox1.TabIndex = 4;
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFullName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtFullName.Location = new System.Drawing.Point(3, 17);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.ReadOnly = true;
+            this.txtFullName.Size = new System.Drawing.Size(388, 15);
+            this.txtFullName.TabIndex = 4;
             // 
             // label2
             // 
@@ -240,21 +254,21 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.textBox6);
+            this.panel7.Controls.Add(this.txtDropOff);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Location = new System.Drawing.Point(12, 308);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(323, 40);
             this.panel7.TabIndex = 5;
             // 
-            // textBox6
+            // txtDropOff
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox6.Location = new System.Drawing.Point(3, 17);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(388, 15);
-            this.textBox6.TabIndex = 4;
+            this.txtDropOff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDropOff.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDropOff.Location = new System.Drawing.Point(3, 17);
+            this.txtDropOff.Name = "txtDropOff";
+            this.txtDropOff.Size = new System.Drawing.Size(388, 15);
+            this.txtDropOff.TabIndex = 4;
             // 
             // label6
             // 
@@ -271,21 +285,21 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.textBox5);
+            this.panel6.Controls.Add(this.txtRecipientName);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(12, 92);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(323, 40);
             this.panel6.TabIndex = 5;
             // 
-            // textBox5
+            // txtRecipientName
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox5.Location = new System.Drawing.Point(3, 17);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(388, 15);
-            this.textBox5.TabIndex = 4;
+            this.txtRecipientName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRecipientName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRecipientName.Location = new System.Drawing.Point(3, 17);
+            this.txtRecipientName.Name = "txtRecipientName";
+            this.txtRecipientName.Size = new System.Drawing.Size(388, 15);
+            this.txtRecipientName.TabIndex = 4;
             // 
             // label5
             // 
@@ -314,21 +328,21 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.txtRecipientContact);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(12, 196);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(323, 40);
             this.panel5.TabIndex = 4;
             // 
-            // textBox4
+            // txtRecipientContact
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(3, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(388, 15);
-            this.textBox4.TabIndex = 4;
+            this.txtRecipientContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRecipientContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtRecipientContact.Location = new System.Drawing.Point(3, 17);
+            this.txtRecipientContact.Name = "txtRecipientContact";
+            this.txtRecipientContact.Size = new System.Drawing.Size(388, 15);
+            this.txtRecipientContact.TabIndex = 4;
             // 
             // label4
             // 
@@ -355,18 +369,6 @@
             this.btnBookDelivery1.Text = "Next";
             this.btnBookDelivery1.UseVisualStyleBackColor = false;
             this.btnBookDelivery1.Click += new System.EventHandler(this.btnBookDelivery1_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(987, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 15;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmBookDetails1
             // 
@@ -412,22 +414,22 @@
         private System.Windows.Forms.Label lblSender;
         private System.Windows.Forms.Label lblRecipient;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPickUp;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtDropOff;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtRecipientName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtRecipientContact;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnBookDelivery1;
         private System.Windows.Forms.Button button1;

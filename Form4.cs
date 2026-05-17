@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
@@ -15,6 +16,15 @@ namespace DEF_Customer
 {
     public partial class frmBookDetails1 : MetroForm
     {
+        // Connection string pointing to your local SQLEXPRESS instance
+        private string connectionString = @"Server=AIKENDAVE\SQLEXPRESS; Database=DEF_DeliveryDB; Integrated Security=True; TrustServerCertificate=True;";
+
+        // --- 4 TEMPORARY SLOTS ---
+        public static string TempPickupAddress = "";
+        public static string TempRecipientName = "";
+        public static string TempRecipientContact = "";
+        public static string TempDropoffAddress = "";
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
@@ -37,6 +47,42 @@ namespace DEF_Customer
         {
             pnlSender.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlSender.Width, pnlSender.Height, 25, 25));
             pnlRecipient.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, pnlRecipient.Width, pnlRecipient.Height, 25, 25));
+
+            // Query to fetch fields based on the active session token
+            string query = "SELECT custFullName, custcontact FROM CUSTOMER WHERE custID = @custID;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Securely grab the ID stored during the login stage
+                    command.Parameters.AddWithValue("@custID", frmLogIn.LoggedInCustID);
+
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // Assign the database records straight into your text elements!
+                                txtFullName.Text = reader["custFullName"].ToString();
+                                txtContact.Text = reader["custcontact"].ToString();
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Failed to pull customer profile details: {ex.Message}",
+                                        "Database Query Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
+            txtPickUp.Text = TempPickupAddress;
+            txtRecipientName.Text = TempRecipientName;
+            txtRecipientContact.Text = TempRecipientContact;
+            txtDropOff.Text = TempDropoffAddress;
         }
 
         private void lblSender_Paint(object sender, PaintEventArgs e)
@@ -101,8 +147,26 @@ namespace DEF_Customer
 
         private void btnBookDelivery1_Click(object sender, EventArgs e)
         {
-            frmBookDetails2 newWindow = new frmBookDetails2();
-            newWindow.Show();
+            // 1. Validation check
+            if (string.IsNullOrEmpty(txtPickUp.Text.Trim()) ||
+                string.IsNullOrEmpty(txtRecipientName.Text.Trim()) ||
+                string.IsNullOrEmpty(txtRecipientContact.Text.Trim()) ||
+                string.IsNullOrEmpty(txtDropOff.Text.Trim()))
+            {
+                MessageBox.Show("Please complete all input fields before moving forward.",
+                                "Incomplete Form", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 2. --- SAVE COPIES TO TEMPORARY MEMORY BEFORE LEAVING ---
+            TempPickupAddress = txtPickUp.Text.Trim();
+            TempRecipientName = txtRecipientName.Text.Trim();
+            TempRecipientContact = txtRecipientContact.Text.Trim();
+            TempDropoffAddress = txtDropOff.Text.Trim();
+
+            // 3. Move cleanly to form 2
+            frmBookDetails2 nextForm = new frmBookDetails2();
+            nextForm.Show();
             this.Hide();
         }
     }
