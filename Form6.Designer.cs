@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBookingSummary));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,8 +74,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBookDelivery3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConfirmDetails = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -105,6 +106,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1082, 72);
             this.panel1.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(987, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 30);
+            this.button1.TabIndex = 15;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox6
             // 
@@ -569,39 +582,43 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Name";
             // 
-            // btnBookDelivery3
+            // btnConfirmDetails
             // 
-            this.btnBookDelivery3.BackColor = System.Drawing.Color.HotPink;
-            this.btnBookDelivery3.FlatAppearance.BorderSize = 0;
-            this.btnBookDelivery3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBookDelivery3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookDelivery3.ForeColor = System.Drawing.Color.White;
-            this.btnBookDelivery3.Location = new System.Drawing.Point(758, 636);
-            this.btnBookDelivery3.Name = "btnBookDelivery3";
-            this.btnBookDelivery3.Size = new System.Drawing.Size(195, 39);
-            this.btnBookDelivery3.TabIndex = 13;
-            this.btnBookDelivery3.Text = "Confirm Details";
-            this.btnBookDelivery3.UseVisualStyleBackColor = false;
-            this.btnBookDelivery3.Click += new System.EventHandler(this.btnBookDelivery3_Click);
+            this.btnConfirmDetails.BackColor = System.Drawing.Color.HotPink;
+            this.btnConfirmDetails.FlatAppearance.BorderSize = 0;
+            this.btnConfirmDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmDetails.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmDetails.Location = new System.Drawing.Point(799, 636);
+            this.btnConfirmDetails.Name = "btnConfirmDetails";
+            this.btnConfirmDetails.Size = new System.Drawing.Size(154, 39);
+            this.btnConfirmDetails.TabIndex = 13;
+            this.btnConfirmDetails.Text = "Confirm Details";
+            this.btnConfirmDetails.UseVisualStyleBackColor = false;
+            this.btnConfirmDetails.Click += new System.EventHandler(this.btnConfirmDetails_Click);
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(987, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 15;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBack.BackColor = System.Drawing.Color.Black;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(639, 636);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(154, 39);
+            this.btnBack.TabIndex = 14;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmBookingSummary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.btnBookDelivery3);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnConfirmDetails);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmBookingSummary";
@@ -688,7 +705,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button btnBookDelivery3;
+        private System.Windows.Forms.Button btnConfirmDetails;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

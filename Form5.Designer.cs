@@ -71,14 +71,14 @@
             this.cmbItemType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtItemDescription = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtItemName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblSender = new System.Windows.Forms.Label();
-            this.btnBookDelivery2 = new System.Windows.Forms.Button();
-            this.btnBookDelivery2Back = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -569,21 +569,21 @@
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtItemDescription);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(15, 97);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(308, 40);
             this.panel3.TabIndex = 5;
             // 
-            // textBox2
+            // txtItemDescription
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(3, 17);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(388, 15);
-            this.textBox2.TabIndex = 4;
+            this.txtItemDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtItemDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtItemDescription.Location = new System.Drawing.Point(3, 17);
+            this.txtItemDescription.Name = "txtItemDescription";
+            this.txtItemDescription.Size = new System.Drawing.Size(388, 15);
+            this.txtItemDescription.TabIndex = 4;
             // 
             // label1
             // 
@@ -601,21 +601,21 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.txtItemName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(16, 51);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(308, 40);
             this.panel2.TabIndex = 4;
             // 
-            // textBox1
+            // txtItemName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(3, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 15);
-            this.textBox1.TabIndex = 4;
+            this.txtItemName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtItemName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtItemName.Location = new System.Drawing.Point(3, 17);
+            this.txtItemName.Name = "txtItemName";
+            this.txtItemName.Size = new System.Drawing.Size(388, 15);
+            this.txtItemName.TabIndex = 4;
             // 
             // label2
             // 
@@ -641,43 +641,43 @@
             this.lblSender.Text = "Package Information";
             this.lblSender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnBookDelivery2
+            // btnNext
             // 
-            this.btnBookDelivery2.BackColor = System.Drawing.Color.HotPink;
-            this.btnBookDelivery2.FlatAppearance.BorderSize = 0;
-            this.btnBookDelivery2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBookDelivery2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookDelivery2.ForeColor = System.Drawing.Color.White;
-            this.btnBookDelivery2.Location = new System.Drawing.Point(843, 646);
-            this.btnBookDelivery2.Name = "btnBookDelivery2";
-            this.btnBookDelivery2.Size = new System.Drawing.Size(140, 39);
-            this.btnBookDelivery2.TabIndex = 12;
-            this.btnBookDelivery2.Text = "Next";
-            this.btnBookDelivery2.UseVisualStyleBackColor = false;
-            this.btnBookDelivery2.Click += new System.EventHandler(this.btnBookDelivery2_Click);
+            this.btnNext.BackColor = System.Drawing.Color.HotPink;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.White;
+            this.btnNext.Location = new System.Drawing.Point(843, 646);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(140, 39);
+            this.btnNext.TabIndex = 12;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // btnBookDelivery2Back
+            // btnBack
             // 
-            this.btnBookDelivery2Back.BackColor = System.Drawing.Color.Black;
-            this.btnBookDelivery2Back.FlatAppearance.BorderSize = 0;
-            this.btnBookDelivery2Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBookDelivery2Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBookDelivery2Back.ForeColor = System.Drawing.Color.White;
-            this.btnBookDelivery2Back.Location = new System.Drawing.Point(697, 646);
-            this.btnBookDelivery2Back.Name = "btnBookDelivery2Back";
-            this.btnBookDelivery2Back.Size = new System.Drawing.Size(140, 39);
-            this.btnBookDelivery2Back.TabIndex = 13;
-            this.btnBookDelivery2Back.Text = "Back";
-            this.btnBookDelivery2Back.UseVisualStyleBackColor = false;
-            this.btnBookDelivery2Back.Click += new System.EventHandler(this.btnBookDelivery2Back_Click);
+            this.btnBack.BackColor = System.Drawing.Color.Black;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(697, 646);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(140, 39);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmBookDetails2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.btnBookDelivery2Back);
-            this.Controls.Add(this.btnBookDelivery2);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.pnlSender);
             this.Controls.Add(this.panel1);
             this.Name = "frmBookDetails2";
@@ -726,10 +726,10 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtItemDescription;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtItemName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblSender;
         private System.Windows.Forms.ComboBox cmbItemType;
@@ -766,8 +766,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnBicycle;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button btnBookDelivery2;
-        private System.Windows.Forms.Button btnBookDelivery2Back;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button button10;
     }
 }

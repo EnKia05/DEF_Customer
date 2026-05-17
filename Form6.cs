@@ -20,9 +20,16 @@ namespace DEF_Customer
             this.Style = MetroFramework.MetroColorStyle.Pink;
         }
 
-        private void btnBookDelivery3_Click(object sender, EventArgs e)
+        private void btnConfirmDetails_Click(object sender, EventArgs e)
         {
             frmBookPayment newWindow = new frmBookPayment();
+            newWindow.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            frmBookDetails2 newWindow = new frmBookDetails2();
             newWindow.Show();
             this.Hide();
         }
