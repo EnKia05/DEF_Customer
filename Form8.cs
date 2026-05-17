@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace DEF_Customer
 {
-    public partial class frmProgress : MetroForm
+    public partial class frmNotifications : MetroForm
     {
-        public frmProgress()
+        public frmNotifications()
         {
             InitializeComponent();
         }

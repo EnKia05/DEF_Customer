@@ -1,6 +1,6 @@
 ﻿namespace DEF_Customer
 {
-    partial class frmProgress
+    partial class frmNotifications
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // frmProgress
+            // frmNotifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "frmProgress";
-            this.Text = "Form8";
+            this.Name = "frmNotifications";
             this.ResumeLayout(false);
 
         }
