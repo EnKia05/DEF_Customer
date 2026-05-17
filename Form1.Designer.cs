@@ -33,13 +33,13 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogIn = new System.Windows.Forms.Button();
             this.lnkSignUp = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -81,21 +81,21 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(324, 208);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(396, 40);
             this.panel1.TabIndex = 3;
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(3, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(388, 15);
-            this.textBox1.TabIndex = 4;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmail.Location = new System.Drawing.Point(3, 17);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(388, 15);
+            this.txtEmail.TabIndex = 4;
             // 
             // label2
             // 
@@ -104,30 +104,30 @@
             this.label2.ForeColor = System.Drawing.Color.Gray;
             this.label2.Location = new System.Drawing.Point(-3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Username";
+            this.label2.Text = "Email";
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.txtPassword);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(324, 254);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(396, 40);
             this.panel3.TabIndex = 6;
             // 
-            // textBox3
+            // txtPassword
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(3, 17);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(388, 15);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.UseSystemPasswordChar = true;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPassword.Location = new System.Drawing.Point(3, 17);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(388, 15);
+            this.txtPassword.TabIndex = 4;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -151,19 +151,20 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Don\'t have an account?";
             // 
-            // button1
+            // btnLogIn
             // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(324, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(396, 39);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLogIn.BackColor = System.Drawing.Color.Black;
+            this.btnLogIn.FlatAppearance.BorderSize = 0;
+            this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogIn.ForeColor = System.Drawing.Color.White;
+            this.btnLogIn.Location = new System.Drawing.Point(324, 300);
+            this.btnLogIn.Name = "btnLogIn";
+            this.btnLogIn.Size = new System.Drawing.Size(396, 39);
+            this.btnLogIn.TabIndex = 8;
+            this.btnLogIn.Text = "Login";
+            this.btnLogIn.UseVisualStyleBackColor = false;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // lnkSignUp
             // 
@@ -186,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 478);
             this.Controls.Add(this.lnkSignUp);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -213,12 +214,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.LinkLabel lnkSignUp;
     }
 }
