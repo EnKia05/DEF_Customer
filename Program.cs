@@ -19,7 +19,7 @@ namespace DEF_Customer
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHome());
+            Application.Run(new frmLogIn());
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]

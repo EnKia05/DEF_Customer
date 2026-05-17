@@ -10,11 +10,24 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
+using System.Data.SqlClient;
 
 namespace DEF_Customer
 {
     public partial class frmSignUp : MetroForm
     {
+        // Place your precise connection string here at the class level
+        private string connectionString = @"Server=AIKENDAVE\SQLEXPRESS; Database=DEF_DeliveryDB; Integrated Security=True; TrustServerCertificate=True;";
+
+        private void ClearFormFields()
+        {
+            txtCustContact.Clear();
+            txtCustEmail.Clear();
+            txtCustPassword.Clear();
+            txtCustFullName.Clear();
+            // Puts cursor back to the top box automatically
+        }
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
@@ -67,6 +80,91 @@ namespace DEF_Customer
         private void frmSignUp_Load(object sender, EventArgs e)
         {
             panel1.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, panel1.Width, panel1.Height, 25, 25));
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            // 1. Collect inputs and trim trailing or leading blank spaces
+            string fullName = txtCustFullName.Text.Trim();
+            string contact = txtCustContact.Text.Trim();
+            string email = txtCustEmail.Text.Trim();
+            string password = txtCustPassword.Text.Trim();
+
+            // 2. Validation: Prevent submission if any text boxes are completely empty
+            if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(contact) ||
+                string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("All registration fields are required! Please complete the form.",
+                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 3. Prompt Confirmation: Show the user their data before saving
+            string confirmationPrompt = $"Are you sure you want to register with these details?\n\n" +
+                                         $"Name: {fullName}\n" +
+                                         $"Contact: {contact}\n" +
+                                         $"Email: {email}";
+
+            DialogResult result = MessageBox.Show(confirmationPrompt, "Confirm Registration",
+                                                  MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            // If the user clicks Cancel instead of OK, halt the transaction completely
+            if (result != DialogResult.OK)
+            {
+                return;
+            }
+
+            // 4. SQL Execution Layer
+            // Build the query targeting your exact table and column schemas
+            string query = @"INSERT INTO CUSTOMER (custFullName, custcontact, custEmail, custPassword) 
+                             VALUES (@custFullName, @custcontact, @custEmail, @custPassword);";
+
+            // Establish standard ADO.NET objects using statements to prevent memory leaks
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Map your local variables securely using parameters to protect against SQL injections
+                    command.Parameters.AddWithValue("@custFullName", fullName);
+                    command.Parameters.AddWithValue("@custcontact", contact);
+                    command.Parameters.AddWithValue("@custEmail", email);
+                    command.Parameters.AddWithValue("@custPassword", password);
+
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Account successfully created and stored! 🎉",
+                                            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Optional: Clear fields or proceed to login form here
+                            ClearFormFields();
+                            // Show the Login Form to the user
+                            frmLogIn loginForm = new frmLogIn();
+                            loginForm.Show();
+                            // Close this current Sign Up Form to keep things tidy
+                            this.Close();
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Check if error number corresponds to a unique constraint violation (duplicate email)
+                        if (ex.Number == 2627 || ex.Number == 2601)
+                        {
+                            MessageBox.Show("This email address is already registered to a different account.",
+                                            "Registration Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"A database error occurred: {ex.Message}",
+                                            "SQL Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
         }
     }
 }

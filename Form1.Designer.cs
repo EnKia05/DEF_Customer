@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lnkSignUp = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
@@ -146,9 +147,9 @@
             this.label5.ForeColor = System.Drawing.Color.Gray;
             this.label5.Location = new System.Drawing.Point(411, 357);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(226, 17);
+            this.label5.Size = new System.Drawing.Size(168, 17);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Don\'t have an account? Register.";
+            this.label5.Text = "Don\'t have an account?";
             // 
             // button1
             // 
@@ -164,11 +165,27 @@
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // lnkSignUp
+            // 
+            this.lnkSignUp.ActiveLinkColor = System.Drawing.Color.HotPink;
+            this.lnkSignUp.AutoSize = true;
+            this.lnkSignUp.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkSignUp.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkSignUp.LinkColor = System.Drawing.Color.Black;
+            this.lnkSignUp.Location = new System.Drawing.Point(585, 357);
+            this.lnkSignUp.Name = "lnkSignUp";
+            this.lnkSignUp.Size = new System.Drawing.Size(62, 17);
+            this.lnkSignUp.TabIndex = 9;
+            this.lnkSignUp.TabStop = true;
+            this.lnkSignUp.Text = "Register.";
+            this.lnkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkSignUp_LinkClicked);
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 478);
+            this.Controls.Add(this.lnkSignUp);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel3);
@@ -202,6 +219,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel lnkSignUp;
     }
 }
 

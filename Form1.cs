@@ -24,5 +24,12 @@ namespace DEF_Customer
         {
 
         }
+
+        private void lnkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmSignUp newWindow = new frmSignUp();
+            newWindow.Show();
+            this.Hide();
+        }
     }
 }
