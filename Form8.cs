@@ -16,6 +16,8 @@ namespace DEF_Customer
         public frmNotifications()
         {
             InitializeComponent();
+            //The color for the upper part of the Form.
+            this.Style = MetroFramework.MetroColorStyle.Pink; //
         }
     }
 }
