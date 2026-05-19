@@ -62,23 +62,29 @@ namespace DEF_Customer
             }
 
             // 2. TRANSACTION EXECUTION ENGINE
+            // Locate this block inside btnSubmitOrder_Click and replace it:
+
             // Query 1: Save Delivery Request data and instantly output the generated identity ID scope number
             string deliveryQuery = @"INSERT INTO DELIVERY_REQUEST 
-                (custID, pickupLocation, receiverName, ReceiverContact, dropOffLocation, itemName, itemDescription, itemType, packageSize, vehicleType) 
-                VALUES (@custID, @pickup, @recName, @recContact, @dropoff, @itemName, @itemDesc, @itemType, @pkgSize, @vehType);
-                SELECT SCOPE_IDENTITY();"; // This captures the deliveryRequestID that SQL server just generated!
+    (custID, pickupLocation, receiverName, ReceiverContact, dropOffLocation, itemName, itemDescription, itemType, packageSize, vehicleType, status, isAssigned) 
+    VALUES (@custID, @pickup, @recName, @recContact, @dropoff, @itemName, @itemDesc, @itemType, @pkgSize, @vehType, 'Pending', 0);
+    SELECT SCOPE_IDENTITY();";
 
             // Query 2: Save Payment log entry using the extracted tracking token
             string paymentQuery = @"INSERT INTO PAYMENT 
-                (deliveryRequestID, flatRate, vehicleSurcharge, totalFee, paymentMethod, paymentStatus, gcashRefNo) 
-                VALUES (@reqID, @flat, @surcharge, @total, @method, @status, @refNo);";
+    (deliveryRequestID, flatRate, vehicleSurcharge, totalFee, paymentMethod, paymentStatus, gcashRefNo) 
+    VALUES (@reqID, @flat, @surcharge, @total, @method, @status, @refNo);";
+
+            // Query 3: ADD THIS NEW QUERY HERE
+            string notificationQuery = @"INSERT INTO CUSTOMER_NOTIFICATION 
+    (deliveryRequestID, custID, notifTitle, notifMessage, createdAt) 
+    VALUES (@reqID, @custID, 'Order Placed', 'Your request has been successfully queued.', GETDATE());";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     connection.Open();
-
                     int newRequestID = 0;
 
                     // Execute Phase 1: Save Delivery
@@ -95,7 +101,6 @@ namespace DEF_Customer
                         command.Parameters.AddWithValue("@pkgSize", frmBookDetails2.TempPackageSize);
                         command.Parameters.AddWithValue("@vehType", frmBookDetails2.TempVehicleType);
 
-                        // Execute and convert object result into our tracking identifier integer variable
                         newRequestID = Convert.ToInt32(command.ExecuteScalar());
                     }
 
@@ -113,13 +118,22 @@ namespace DEF_Customer
                         command.ExecuteNonQuery();
                     }
 
+                    // Execute Phase 3: ADD THIS NEW COMMAND EXECUTION BLOCK HERE
+                    using (SqlCommand command = new SqlCommand(notificationQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@reqID", newRequestID);
+                        command.Parameters.AddWithValue("@custID", frmLogIn.LoggedInCustID);
+
+                        command.ExecuteNonQuery();
+                    }
+
                     // Success Feedback Message Box
                     MessageBox.Show($"Order placed successfully!\nYour Booking ID is #{newRequestID}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // 3. NAVIGATION FORWARD
-                    frmNotifications newWindow = new frmNotifications(); //
-                    newWindow.Show(); //
-                    this.Hide(); //
+                    frmNotifications newWindow = new frmNotifications();
+                    newWindow.Show();
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {
