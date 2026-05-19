@@ -216,6 +216,11 @@ namespace DEF_Customer
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            // Re-instantiate the main dashboard home screen
+            frmHome homeForm = new frmHome();
+            homeForm.Show();
+
+            // Close the notifications window safely
             this.Close();
         }
 

@@ -53,6 +53,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtCustContact = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkTermsOfService = new System.Windows.Forms.CheckBox();
+            this.chkPrivacyPolicy = new System.Windows.Forms.CheckBox();
+            this.lnkTermsofService = new System.Windows.Forms.LinkLabel();
+            this.lnlPrivacyPolicy = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -76,6 +80,10 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lnlPrivacyPolicy);
+            this.panel1.Controls.Add(this.lnkTermsofService);
+            this.panel1.Controls.Add(this.chkPrivacyPolicy);
+            this.panel1.Controls.Add(this.chkTermsOfService);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.btnSignUp);
@@ -86,9 +94,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(242, 48);
+            this.panel1.Location = new System.Drawing.Point(242, 54);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 379);
+            this.panel1.Size = new System.Drawing.Size(300, 387);
             this.panel1.TabIndex = 2;
             // 
             // label5
@@ -96,7 +104,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(19, 63);
+            this.label5.Location = new System.Drawing.Point(19, 42);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(72, 17);
             this.label5.TabIndex = 11;
@@ -107,7 +115,7 @@
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Controls.Add(this.pictureBox5);
             this.panel8.Controls.Add(this.txtCustFullName);
-            this.panel8.Location = new System.Drawing.Point(22, 83);
+            this.panel8.Location = new System.Drawing.Point(22, 59);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(257, 36);
             this.panel8.TabIndex = 10;
@@ -146,7 +154,7 @@
             this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignUp.ForeColor = System.Drawing.Color.White;
-            this.btnSignUp.Location = new System.Drawing.Point(22, 318);
+            this.btnSignUp.Location = new System.Drawing.Point(22, 337);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(257, 39);
             this.btnSignUp.TabIndex = 9;
@@ -159,7 +167,7 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Controls.Add(this.txtCustPassword);
-            this.panel6.Location = new System.Drawing.Point(22, 275);
+            this.panel6.Location = new System.Drawing.Point(22, 237);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(257, 36);
             this.panel6.TabIndex = 7;
@@ -196,7 +204,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(19, 255);
+            this.label4.Location = new System.Drawing.Point(19, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 6;
@@ -207,7 +215,7 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.txtCustEmail);
-            this.panel4.Location = new System.Drawing.Point(22, 206);
+            this.panel4.Location = new System.Drawing.Point(22, 178);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(257, 36);
             this.panel4.TabIndex = 5;
@@ -244,7 +252,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(19, 186);
+            this.label3.Location = new System.Drawing.Point(19, 162);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 4;
@@ -255,7 +263,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(19, 122);
+            this.label2.Location = new System.Drawing.Point(19, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 17);
             this.label2.TabIndex = 3;
@@ -266,7 +274,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.txtCustContact);
-            this.panel2.Location = new System.Drawing.Point(22, 142);
+            this.panel2.Location = new System.Drawing.Point(22, 118);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(257, 36);
             this.panel2.TabIndex = 1;
@@ -302,13 +310,65 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 12);
+            this.label1.Location = new System.Drawing.Point(22, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create Account";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Paint += new System.Windows.Forms.PaintEventHandler(this.label1_Paint);
+            // 
+            // chkTermsOfService
+            // 
+            this.chkTermsOfService.AutoSize = true;
+            this.chkTermsOfService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkTermsOfService.Location = new System.Drawing.Point(22, 279);
+            this.chkTermsOfService.Name = "chkTermsOfService";
+            this.chkTermsOfService.Size = new System.Drawing.Size(14, 13);
+            this.chkTermsOfService.TabIndex = 12;
+            this.chkTermsOfService.UseVisualStyleBackColor = true;
+            // 
+            // chkPrivacyPolicy
+            // 
+            this.chkPrivacyPolicy.AutoSize = true;
+            this.chkPrivacyPolicy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chkPrivacyPolicy.Location = new System.Drawing.Point(22, 302);
+            this.chkPrivacyPolicy.Name = "chkPrivacyPolicy";
+            this.chkPrivacyPolicy.Size = new System.Drawing.Size(14, 13);
+            this.chkPrivacyPolicy.TabIndex = 13;
+            this.chkPrivacyPolicy.UseVisualStyleBackColor = true;
+            // 
+            // lnkTermsofService
+            // 
+            this.lnkTermsofService.ActiveLinkColor = System.Drawing.Color.HotPink;
+            this.lnkTermsofService.AutoSize = true;
+            this.lnkTermsofService.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnkTermsofService.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lnkTermsofService.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnkTermsofService.LinkColor = System.Drawing.Color.Black;
+            this.lnkTermsofService.Location = new System.Drawing.Point(37, 277);
+            this.lnkTermsofService.Name = "lnkTermsofService";
+            this.lnkTermsofService.Size = new System.Drawing.Size(109, 17);
+            this.lnkTermsofService.TabIndex = 14;
+            this.lnkTermsofService.TabStop = true;
+            this.lnkTermsofService.Text = "Terms of Service";
+            this.lnkTermsofService.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkTermsofService_LinkClicked);
+            // 
+            // lnlPrivacyPolicy
+            // 
+            this.lnlPrivacyPolicy.ActiveLinkColor = System.Drawing.Color.HotPink;
+            this.lnlPrivacyPolicy.AutoSize = true;
+            this.lnlPrivacyPolicy.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnlPrivacyPolicy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lnlPrivacyPolicy.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.lnlPrivacyPolicy.LinkColor = System.Drawing.Color.Black;
+            this.lnlPrivacyPolicy.Location = new System.Drawing.Point(37, 299);
+            this.lnlPrivacyPolicy.Name = "lnlPrivacyPolicy";
+            this.lnlPrivacyPolicy.Size = new System.Drawing.Size(95, 17);
+            this.lnlPrivacyPolicy.TabIndex = 15;
+            this.lnlPrivacyPolicy.TabStop = true;
+            this.lnlPrivacyPolicy.Text = "Privacy Policy";
+            this.lnlPrivacyPolicy.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnlPrivacyPolicy_LinkClicked);
             // 
             // frmSignUp
             // 
@@ -364,5 +424,9 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.TextBox txtCustFullName;
+        private System.Windows.Forms.CheckBox chkTermsOfService;
+        private System.Windows.Forms.CheckBox chkPrivacyPolicy;
+        private System.Windows.Forms.LinkLabel lnkTermsofService;
+        private System.Windows.Forms.LinkLabel lnlPrivacyPolicy;
     }
 }

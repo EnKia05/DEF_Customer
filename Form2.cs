@@ -26,6 +26,10 @@ namespace DEF_Customer
             txtCustPassword.Clear();
             txtCustFullName.Clear();
             // Puts cursor back to the top box automatically
+
+            // Reset the checkboxes to unchecked state
+            chkTermsOfService.Checked = false;
+            chkPrivacyPolicy.Checked = false;
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -90,12 +94,21 @@ namespace DEF_Customer
             string email = txtCustEmail.Text.Trim();
             string password = txtCustPassword.Text.Trim();
 
-            // 2. Validation: Prevent submission if any text boxes are completely empty
+            // 2. Input Validation: Prevent submission if any text boxes are completely empty
             if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(contact) ||
                 string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("All registration fields are required! Please complete the form.",
                                 "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ── COMPLIANCE CHECKBOX VALIDATION LAYER ──
+            // Prevent progression unless both agreement checkboxes are ticked
+            if (!chkTermsOfService.Checked || !chkPrivacyPolicy.Checked)
+            {
+                MessageBox.Show("You must read and agree to both the Terms of Service and Privacy Policy before creating an account.",
+                                "Policy Agreement Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -115,16 +128,13 @@ namespace DEF_Customer
             }
 
             // 4. SQL Execution Layer
-            // Build the query targeting your exact table and column schemas
             string query = @"INSERT INTO CUSTOMER (custFullName, custcontact, custEmail, custPassword) 
                              VALUES (@custFullName, @custcontact, @custEmail, @custPassword);";
 
-            // Establish standard ADO.NET objects using statements to prevent memory leaks
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
                 {
-                    // Map your local variables securely using parameters to protect against SQL injections
                     command.Parameters.AddWithValue("@custFullName", fullName);
                     command.Parameters.AddWithValue("@custcontact", contact);
                     command.Parameters.AddWithValue("@custEmail", email);
@@ -140,18 +150,15 @@ namespace DEF_Customer
                             MessageBox.Show("Account successfully created and stored! 🎉",
                                             "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Optional: Clear fields or proceed to login form here
                             ClearFormFields();
-                            // Show the Login Form to the user
+
                             frmLogIn loginForm = new frmLogIn();
                             loginForm.Show();
-                            // Close this current Sign Up Form to keep things tidy
                             this.Close();
                         }
                     }
                     catch (SqlException ex)
                     {
-                        // Check if error number corresponds to a unique constraint violation (duplicate email)
                         if (ex.Number == 2627 || ex.Number == 2601)
                         {
                             MessageBox.Show("This email address is already registered to a different account.",
@@ -165,6 +172,27 @@ namespace DEF_Customer
                     }
                 }
             }
+        }
+
+        private void lnkTermsofService_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string tosText = "DEF Delivery Service — Terms of Service\n\n" +
+                             "1. Acceptance of Terms: By creating an account, you agree to be bound by these local logistics terms.\n" +
+                             "2. User Conduct: Users must provide accurate profile details and drop-off addresses.\n" +
+                             "3. Booking Limitations: Prohibited items, hazardous materials, and illegal goods will not be handled by our delivery couriers.\n" +
+                             "4. Payment Policies: Cash on Delivery must be settled immediately upon arrival. Online Payments are validated using reference matching rules.";
+
+            MessageBox.Show(tosText, "Terms of Service", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void lnlPrivacyPolicy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string privacyText = "DEF Delivery Service — Privacy Policy\n\n" +
+                                 "1. Information Collection: We safely store your full name, mobile number, and email credentials to handle package fulfillment.\n" +
+                                 "2. Data Usage: Address and packaging attributes are strictly shared with matched dispatch couriers for delivery routing.\n" +
+                                 "3. Security Protections: Session verification controls guard account credentials securely within our relational database space.";
+
+            MessageBox.Show(privacyText, "Privacy Policy", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
