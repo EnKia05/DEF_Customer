@@ -170,16 +170,7 @@ namespace DEF_Customer
         /// <summary>
         /// Sign out action sequence handling clean-up operations.
         /// </summary>
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            DialogResult confirmResult = MessageBox.Show("Are you sure you want to sign out?", "Confirm Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (confirmResult == DialogResult.Yes)
-            {
-                // Re-open authentication portal or flush runtime context before hard exit closure
-                Application.Exit();
-            }
-        }
 
         #endregion
 
@@ -201,6 +192,17 @@ namespace DEF_Customer
             frmHome homeForm = new frmHome();
             homeForm.Show();
             this.Close();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            DialogResult confirmResult = MessageBox.Show("Are you sure you want to sign out?", "Confirm Log Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                // Re-open authentication portal or flush runtime context before hard exit closure
+                Application.Exit();
+            }
         }
     }
 }
