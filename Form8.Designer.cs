@@ -35,16 +35,15 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlNotificationPlaceholder = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.btnProfile);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(-1, 25);
             this.panel1.Name = "panel1";
@@ -110,15 +109,18 @@
             this.pnlNotificationPlaceholder.Size = new System.Drawing.Size(873, 481);
             this.pnlNotificationPlaceholder.TabIndex = 18;
             // 
-            // pictureBox6
+            // btnProfile
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1028, 21);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 14;
-            this.pictureBox6.TabStop = false;
+            this.btnProfile.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProfile.BackgroundImage")));
+            this.btnProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Location = new System.Drawing.Point(1028, 21);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(30, 30);
+            this.btnProfile.TabIndex = 16;
+            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // frmNotifications
             // 
@@ -135,7 +137,6 @@
             this.Enter += new System.EventHandler(this.frmNotifications_Enter);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +150,6 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlNotificationPlaceholder;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnProfile;
     }
 }

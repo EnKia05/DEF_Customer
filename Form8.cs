@@ -350,5 +350,17 @@ namespace DEF_Customer
                 }
             }
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            // Instantiate your profile window layout
+            frmProfile profileWindow = new frmProfile();
+
+            // Display the profile workspace
+            profileWindow.Show();
+
+            // Close the home dashboard window safely as per your navigation rules
+            this.Close();
+        }
     }
 }
