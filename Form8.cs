@@ -89,6 +89,15 @@ namespace DEF_Customer
                             string currentStatus = reader["DeliveryStatus"].ToString();
                             string itemName = reader["itemName"].ToString();
 
+                            // --- ADD THIS TRIGGER LAYER HERE ---
+                            if (currentStatus.Trim() == "Completed")
+                            {
+                                // Convert string ID to int and pass it to your prompt layer
+                                int numericOrderID = Convert.ToInt32(orderID);
+                                PromptQuickFeedback(numericOrderID);
+                            }
+                            // -----------------------------------
+
                             // Formats timestamp cleanly for a standard log view
                             DateTime timeStamp = Convert.ToDateTime(reader["createdAt"]);
                             string displayTime = timeStamp.ToString("yyyy-MM-dd hh:mm tt");
@@ -234,6 +243,112 @@ namespace DEF_Customer
         private void frmNotifications_Enter(object sender, EventArgs e)
         {
             PopulateCustomerNotifications();
+        }
+
+        private void PromptQuickFeedback(int orderID)
+        {
+            // ── 1. QUICK GUARD LAYER ──
+            string checkQuery = "SELECT COUNT(1) FROM DELIVERY_FEEDBACK WHERE deliveryRequestID = @reqID;";
+
+            using (SqlConnection checkConn = new SqlConnection(connectionString))
+            using (SqlCommand checkCmd = new SqlCommand(checkQuery, checkConn))
+            {
+                checkCmd.Parameters.AddWithValue("@reqID", orderID);
+                try
+                {
+                    checkConn.Open();
+                    int alreadyExists = (int)checkCmd.ExecuteScalar();
+
+                    if (alreadyExists > 0)
+                    {
+                        return; // Feedback already exists! Exit silently.
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error verifying feedback logs: {ex.Message}", "Database Check Failed");
+                    return;
+                }
+            }
+
+            // ── 2. SINGLE-PROMPT 1-5 STAR SELECTION LAYER ──
+            int rating = 0;
+            bool isValidRating = false;
+
+            while (!isValidRating)
+            {
+                // Prompts the user to enter a specific number from 1 to 5
+                string ratingInput = Microsoft.VisualBasic.Interaction.InputBox(
+                    $"Your Order #{orderID} has been successfully delivered! 🎉\n\n" +
+                    "Please rate your delivery experience:\n" +
+                    "5 = Excellent\n" +
+                    "4 = Very Good\n" +
+                    "3 = Average\n" +
+                    "2 = Poor\n" +
+                    "1 = Very Poor\n\n" +
+                    "Enter a number (1-5):",
+                    "Rate Your Delivery",
+                    "5" // Defaults to 5 stars automatically for quick submission
+                );
+
+                // If the user clicks Cancel or leaves it empty, exit gracefully
+                if (string.IsNullOrEmpty(ratingInput))
+                {
+                    return;
+                }
+
+                // Validate that the user typed an actual number between 1 and 5
+                if (int.TryParse(ratingInput, out int numericScore) && numericScore >= 1 && numericScore <= 5)
+                {
+                    rating = numericScore;
+                    isValidRating = true;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid selection! Please enter a valid number between 1 and 5.",
+                                    "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            // ── 3. COMMENT CAPTURE LAYER ──
+            string comment = "No comments provided.";
+            string userInput = Microsoft.VisualBasic.Interaction.InputBox(
+                $"You are logging a {rating}-Star rating.\n" +
+                "Please share any additional comments or notes about this delivery (Optional):",
+                "Add Feedback Remarks",
+                ""
+            ).Trim();
+
+            if (!string.IsNullOrEmpty(userInput))
+            {
+                comment = userInput;
+            }
+
+            // ── 4. DATABASE SUBMISSION LAYER ──
+            string query = @"INSERT INTO DELIVERY_FEEDBACK (deliveryRequestID, custID, rating, comments) 
+                     VALUES (@reqID, @custID, @rating, @comments);";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@reqID", orderID);
+                    command.Parameters.AddWithValue("@custID", frmLogIn.LoggedInCustID);
+                    command.Parameters.AddWithValue("@rating", rating);
+                    command.Parameters.AddWithValue("@comments", comment);
+
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        MessageBox.Show($"Thank you! A {rating}-Star rating has been logged to our analytics dashboard.", "Feedback Saved");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Failed to save feedback data: {ex.Message}", "SQL Insertion Error");
+                    }
+                }
+            }
         }
     }
 }
