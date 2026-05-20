@@ -56,21 +56,21 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtFullName = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.dgvRecentLowRatings = new System.Windows.Forms.DataGridView();
+            this.dgvDeliveryHistory = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblTotalSpendingCount = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblTotalOrdersCount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlNotificationPlaceholder.SuspendLayout();
@@ -85,7 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentLowRatings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryHistory)).BeginInit();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -113,6 +113,7 @@
             this.btnNotifications.Size = new System.Drawing.Size(30, 30);
             this.btnNotifications.TabIndex = 14;
             this.btnNotifications.UseVisualStyleBackColor = true;
+            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
             // pictureBox2
             // 
@@ -360,19 +361,20 @@
             this.txtFullName.Size = new System.Drawing.Size(309, 15);
             this.txtFullName.TabIndex = 5;
             // 
-            // btnExit
+            // btnBack
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Black;
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(817, 658);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(154, 39);
-            this.btnExit.TabIndex = 22;
-            this.btnExit.Text = "Back";
-            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnBack.BackColor = System.Drawing.Color.Black;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(817, 658);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(154, 39);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnRefresh
             // 
@@ -402,7 +404,7 @@
             // panel12
             // 
             this.panel12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel12.Controls.Add(this.dgvRecentLowRatings);
+            this.panel12.Controls.Add(this.dgvDeliveryHistory);
             this.panel12.Controls.Add(this.label6);
             this.panel12.Location = new System.Drawing.Point(7, 7);
             this.panel12.Name = "panel12";
@@ -420,11 +422,11 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Delivery History";
             // 
-            // dgvRecentLowRatings
+            // dgvDeliveryHistory
             // 
-            this.dgvRecentLowRatings.AllowUserToAddRows = false;
-            this.dgvRecentLowRatings.AllowUserToDeleteRows = false;
-            this.dgvRecentLowRatings.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDeliveryHistory.AllowUserToAddRows = false;
+            this.dgvDeliveryHistory.AllowUserToDeleteRows = false;
+            this.dgvDeliveryHistory.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.HotPink;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -432,18 +434,18 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentLowRatings.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRecentLowRatings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecentLowRatings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDeliveryHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDeliveryHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeliveryHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3});
-            this.dgvRecentLowRatings.GridColor = System.Drawing.Color.HotPink;
-            this.dgvRecentLowRatings.Location = new System.Drawing.Point(0, 37);
-            this.dgvRecentLowRatings.Name = "dgvRecentLowRatings";
-            this.dgvRecentLowRatings.ReadOnly = true;
-            this.dgvRecentLowRatings.RowHeadersWidth = 51;
-            this.dgvRecentLowRatings.RowTemplate.Height = 24;
-            this.dgvRecentLowRatings.Size = new System.Drawing.Size(679, 239);
-            this.dgvRecentLowRatings.TabIndex = 25;
+            this.dgvDeliveryHistory.GridColor = System.Drawing.Color.HotPink;
+            this.dgvDeliveryHistory.Location = new System.Drawing.Point(0, 37);
+            this.dgvDeliveryHistory.Name = "dgvDeliveryHistory";
+            this.dgvDeliveryHistory.ReadOnly = true;
+            this.dgvDeliveryHistory.RowHeadersWidth = 51;
+            this.dgvDeliveryHistory.RowTemplate.Height = 24;
+            this.dgvDeliveryHistory.Size = new System.Drawing.Size(679, 239);
+            this.dgvDeliveryHistory.TabIndex = 25;
             // 
             // Column3
             // 
@@ -466,7 +468,7 @@
             // panel15
             // 
             this.panel15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel15.Controls.Add(this.label9);
+            this.panel15.Controls.Add(this.lblTotalOrdersCount);
             this.panel15.Controls.Add(this.label10);
             this.panel15.Location = new System.Drawing.Point(7, 7);
             this.panel15.Name = "panel15";
@@ -497,23 +499,23 @@
             // panel13
             // 
             this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel13.Controls.Add(this.label7);
+            this.panel13.Controls.Add(this.lblTotalSpendingCount);
             this.panel13.Controls.Add(this.label8);
             this.panel13.Location = new System.Drawing.Point(7, 7);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(136, 104);
             this.panel13.TabIndex = 20;
             // 
-            // label7
+            // lblTotalSpendingCount
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(52, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(33, 38);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "0";
+            this.lblTotalSpendingCount.AutoSize = true;
+            this.lblTotalSpendingCount.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalSpendingCount.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalSpendingCount.Location = new System.Drawing.Point(52, 42);
+            this.lblTotalSpendingCount.Name = "lblTotalSpendingCount";
+            this.lblTotalSpendingCount.Size = new System.Drawing.Size(33, 38);
+            this.lblTotalSpendingCount.TabIndex = 22;
+            this.lblTotalSpendingCount.Text = "0";
             // 
             // label8
             // 
@@ -526,27 +528,28 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Total Spending";
             // 
-            // label9
+            // lblTotalOrdersCount
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(52, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(33, 38);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "0";
+            this.lblTotalOrdersCount.AutoSize = true;
+            this.lblTotalOrdersCount.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalOrdersCount.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalOrdersCount.Location = new System.Drawing.Point(52, 33);
+            this.lblTotalOrdersCount.Name = "lblTotalOrdersCount";
+            this.lblTotalOrdersCount.Size = new System.Drawing.Size(33, 38);
+            this.lblTotalOrdersCount.TabIndex = 23;
+            this.lblTotalOrdersCount.Text = "0";
             // 
             // frmProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 720);
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pnlNotificationPlaceholder);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "frmProfile";
+            this.Load += new System.EventHandler(this.frmProfile_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlNotificationPlaceholder.ResumeLayout(false);
@@ -567,7 +570,7 @@
             this.panel10.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecentLowRatings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryHistory)).EndInit();
             this.panel14.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
@@ -607,20 +610,20 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox txtContact;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.DataGridView dgvRecentLowRatings;
+        private System.Windows.Forms.DataGridView dgvDeliveryHistory;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblTotalSpendingCount;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblTotalOrdersCount;
         private System.Windows.Forms.Label label10;
     }
 }
