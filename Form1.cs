@@ -31,7 +31,11 @@ namespace DEF_Customer
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // Forces the window context to become active immediately on screen
+            this.Activate();
 
+            // Directly forces the input cursor focus onto your Email field
+            txtEmail.Focus();
         }
 
         private void lnkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
