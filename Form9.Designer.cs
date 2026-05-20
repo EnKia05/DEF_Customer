@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form9));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnNotifications = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -65,6 +65,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dgvRecentLowRatings = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlNotificationPlaceholder.SuspendLayout();
@@ -80,6 +81,7 @@
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecentLowRatings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,7 +175,7 @@
             this.panel8.Controls.Add(this.pictureBox5);
             this.panel8.Location = new System.Drawing.Point(180, 35);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(321, 36);
+            this.panel8.Size = new System.Drawing.Size(341, 36);
             this.panel8.TabIndex = 16;
             // 
             // panel9
@@ -182,13 +184,13 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel9.Location = new System.Drawing.Point(0, 35);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(321, 1);
+            this.panel9.Size = new System.Drawing.Size(341, 1);
             this.panel9.TabIndex = 4;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(295, 7);
+            this.pictureBox5.Location = new System.Drawing.Point(315, 7);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(22, 22);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -200,9 +202,9 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.pictureBox3);
             this.panel4.Controls.Add(this.txtCustEmail);
-            this.panel4.Location = new System.Drawing.Point(528, 35);
+            this.panel4.Location = new System.Drawing.Point(532, 35);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(321, 36);
+            this.panel4.Size = new System.Drawing.Size(341, 36);
             this.panel4.TabIndex = 15;
             // 
             // panel5
@@ -211,13 +213,13 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(0, 35);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(321, 1);
+            this.panel5.Size = new System.Drawing.Size(341, 1);
             this.panel5.TabIndex = 4;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(295, 7);
+            this.pictureBox3.Location = new System.Drawing.Point(315, 7);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(22, 22);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -229,7 +231,7 @@
             this.txtCustEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustEmail.Location = new System.Drawing.Point(0, 11);
             this.txtCustEmail.Name = "txtCustEmail";
-            this.txtCustEmail.Size = new System.Drawing.Size(289, 15);
+            this.txtCustEmail.Size = new System.Drawing.Size(309, 15);
             this.txtCustEmail.TabIndex = 4;
             // 
             // label3
@@ -261,7 +263,7 @@
             this.panel2.Controls.Add(this.txtCustContact);
             this.panel2.Location = new System.Drawing.Point(180, 131);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(321, 36);
+            this.panel2.Size = new System.Drawing.Size(341, 36);
             this.panel2.TabIndex = 12;
             // 
             // panel3
@@ -270,13 +272,13 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(321, 1);
+            this.panel3.Size = new System.Drawing.Size(341, 1);
             this.panel3.TabIndex = 4;
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(295, 7);
+            this.pictureBox4.Location = new System.Drawing.Point(315, 7);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(22, 22);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -288,7 +290,7 @@
             this.txtCustContact.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustContact.Location = new System.Drawing.Point(0, 11);
             this.txtCustContact.Name = "txtCustContact";
-            this.txtCustContact.Size = new System.Drawing.Size(289, 15);
+            this.txtCustContact.Size = new System.Drawing.Size(309, 15);
             this.txtCustContact.TabIndex = 4;
             // 
             // panel6
@@ -296,9 +298,9 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Controls.Add(this.textBox1);
-            this.panel6.Location = new System.Drawing.Point(528, 131);
+            this.panel6.Location = new System.Drawing.Point(532, 131);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(321, 36);
+            this.panel6.Size = new System.Drawing.Size(341, 36);
             this.panel6.TabIndex = 17;
             // 
             // panel7
@@ -307,13 +309,13 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel7.Location = new System.Drawing.Point(0, 35);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(321, 1);
+            this.panel7.Size = new System.Drawing.Size(341, 1);
             this.panel7.TabIndex = 4;
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(295, 7);
+            this.pictureBox6.Location = new System.Drawing.Point(315, 7);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(22, 22);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -325,7 +327,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Location = new System.Drawing.Point(0, 11);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(226, 15);
+            this.textBox1.Size = new System.Drawing.Size(309, 15);
             this.textBox1.TabIndex = 4;
             // 
             // label4
@@ -344,7 +346,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(0, 11);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 15);
+            this.textBox2.Size = new System.Drawing.Size(309, 15);
             this.textBox2.TabIndex = 5;
             // 
             // btnExit
@@ -382,7 +384,7 @@
             this.panel10.Controls.Add(this.panel12);
             this.panel10.Location = new System.Drawing.Point(180, 182);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(674, 290);
+            this.panel10.Size = new System.Drawing.Size(693, 290);
             this.panel10.TabIndex = 18;
             // 
             // panel11
@@ -402,12 +404,13 @@
             this.panel12.Controls.Add(this.label6);
             this.panel12.Location = new System.Drawing.Point(7, 7);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(659, 276);
+            this.panel12.Size = new System.Drawing.Size(679, 276);
             this.panel12.TabIndex = 19;
             // 
             // panel13
             // 
             this.panel13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel13.Controls.Add(this.label7);
             this.panel13.Location = new System.Drawing.Point(7, 7);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(136, 276);
@@ -429,14 +432,14 @@
             this.dgvRecentLowRatings.AllowUserToAddRows = false;
             this.dgvRecentLowRatings.AllowUserToDeleteRows = false;
             this.dgvRecentLowRatings.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRecentLowRatings.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRecentLowRatings.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRecentLowRatings.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecentLowRatings.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3});
@@ -446,7 +449,7 @@
             this.dgvRecentLowRatings.ReadOnly = true;
             this.dgvRecentLowRatings.RowHeadersWidth = 51;
             this.dgvRecentLowRatings.RowTemplate.Height = 24;
-            this.dgvRecentLowRatings.Size = new System.Drawing.Size(659, 239);
+            this.dgvRecentLowRatings.Size = new System.Drawing.Size(679, 239);
             this.dgvRecentLowRatings.TabIndex = 25;
             // 
             // Column3
@@ -456,6 +459,17 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.HotPink;
+            this.label7.Location = new System.Drawing.Point(17, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(116, 23);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Money Spent";
             // 
             // Form9
             // 
@@ -489,6 +503,8 @@
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecentLowRatings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -532,5 +548,6 @@
         private System.Windows.Forms.DataGridView dgvRecentLowRatings;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label label7;
     }
 }
