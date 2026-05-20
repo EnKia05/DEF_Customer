@@ -79,9 +79,13 @@ namespace DEF_Customer
         /// </summary>
         private async Task LoadMetricCardsAsync()
         {
-            // Sums complete totals. Assumes your DELIVERY_REQUEST or a payment table carries the fee configuration.
-            // Adjust the column name 'totalFee' below if your delivery pricing column uses a different key name.
-            string querySpend = "SELECT ISNULL(SUM(totalFee), 0) FROM DELIVERY_REQUEST WHERE custID = @CustID AND status = 'Completed';";
+            // FIX: Joined DELIVERY_REQUEST with PAYMENT to access the 'totalFee' column securely
+            string querySpend = @"
+        SELECT ISNULL(SUM(P.totalFee), 0) 
+        FROM DELIVERY_REQUEST DR
+        INNER JOIN PAYMENT P ON DR.deliveryRequestID = P.deliveryRequestID
+        WHERE DR.custID = @CustID AND DR.status = 'Completed';";
+
             string queryOrders = "SELECT COUNT(*) FROM DELIVERY_REQUEST WHERE custID = @CustID;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
