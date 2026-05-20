@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace DEF_Customer
 {
-    public partial class Form9 : MetroForm
+    public partial class frmProfile : MetroForm
     {
-        public Form9()
+        public frmProfile()
         {
             InitializeComponent();
             // The color for the upper part of the Form
