@@ -42,9 +42,8 @@ namespace DEF_Customer
         /// </summary>
         private async Task LoadCustomerAccountDetailsAsync()
         {
-            // Note: If your schema explicitly splits custFullName into firstName/lastName, 
-            // you can modify this query to use: CONCAT(firstName, ' ', lastName) AS custFullName
-            string query = "SELECT custFullName, email, contactNumber, customerPassword FROM CUSTOMER WHERE custID = @CustID;";
+            // Updated with your exact database schema column names: custFullName, custEmail, custcontact, custPassword
+            string query = "SELECT custFullName, custEmail, custcontact, custPassword FROM CUSTOMER WHERE custID = @CustID;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(query, connection))
@@ -59,11 +58,11 @@ namespace DEF_Customer
                         if (await reader.ReadAsync())
                         {
                             txtFullName.Text = reader["custFullName"].ToString();
-                            txtEmail.Text = reader["email"].ToString();
-                            txtContact.Text = reader["contactNumber"].ToString();
+                            txtEmail.Text = reader["custEmail"].ToString(); // Fixed column mapping
+                            txtContact.Text = reader["custcontact"].ToString(); // Fixed column mapping
 
                             // Mask password for security layout compliance
-                            txtPassword.Text = reader["customerPassword"].ToString();
+                            txtPassword.Text = reader["custPassword"].ToString(); // Fixed column mapping
                             txtPassword.UseSystemPasswordChar = true;
                         }
                     }
