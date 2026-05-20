@@ -125,13 +125,13 @@ namespace DEF_Customer
             if (dgvDeliveryHistory == null) return;
 
             string queryHistory = @"
-                SELECT 
-                    deliveryRequestID AS [Delivery ID],
-                    status AS [Status],
-                    dateRequested AS [Date]
-                FROM DELIVERY_REQUEST 
-                WHERE custID = @CustID
-                ORDER BY dateRequested DESC;";
+            SELECT 
+                deliveryRequestID AS [Delivery ID],
+                status AS [Status],
+                createdAt AS [Date]
+            FROM DELIVERY_REQUEST 
+            WHERE custID = @CustID
+            ORDER BY createdAt DESC;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             using (SqlCommand command = new SqlCommand(queryHistory, connection))
