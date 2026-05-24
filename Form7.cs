@@ -127,8 +127,33 @@ namespace DEF_Customer
                         command.ExecuteNonQuery();
                     }
 
-                    // Success Feedback Message Box
-                    MessageBox.Show($"Order placed successfully!\nYour Booking ID is #{newRequestID}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Generate a cleanly formatted text invoice snippet using current system values
+                    string invoiceSummary =
+                        "========================================\n" +
+                        "          DEF DELIVERY SERVICE          \n" +
+                        "                INVOICE                 \n" +
+                        "========================================\n" +
+                        $"Booking ID: #{newRequestID}\n" +
+                        $"Date: {DateTime.Now:dd/MM/yyyy hh:mm tt}\n\n" +
+                        "[ROUTE DETAILS]\n" +
+                        $"From: {frmBookDetails1.TempPickupAddress}\n" +
+                        $"To: {frmBookDetails1.TempDropoffAddress}\n\n" +
+                        "[ITEM DETAILS]\n" +
+                        $"Item: {frmBookDetails2.TempItemName}\n" +
+                        $"Type: {frmBookDetails2.TempItemType}\n" +
+                        $"Vehicle: {frmBookDetails2.TempVehicleType}\n\n" +
+                        "[PAYMENT SUMMARY]\n" +
+                        $"Base Flat Rate:     ₱ {flatRate:0.00}\n" +
+                        $"Vehicle Surcharge:  ₱ {vehicleSurcharge:0.00}\n" +
+                        "----------------------------------------\n" +
+                        $"TOTAL AMOUNT:       ₱ {totalFee:0.00}\n" +
+                        $"Method:             {paymentMethod}\n" +
+                        $"Payment Status:     {paymentStatus}\n" +
+                        "========================================\n" +
+                        " Thank you for booking with DEF Service! ";
+
+                    // Display the complete formatted invoice block to the customer
+                    MessageBox.Show(invoiceSummary, "Booking Invoice Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // 3. NAVIGATION FORWARD
                     frmNotifications newWindow = new frmNotifications();
