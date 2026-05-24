@@ -17,12 +17,16 @@ namespace DEF_Customer
         // Database connection string config targeting your local instance
         private readonly string connectionString = @"Server=AIKENDAVE\SQLEXPRESS; Database=DEF_DeliveryDB; Integrated Security=True; TrustServerCertificate=True;";
 
-        // Simulating the globally logged-in customer's ID (Replace with your global session variable, e.g., Program.CurrentCustomerID)
-        private readonly int loggedInCustomerID = 1001;
+        // This will hold the live logged-in user ID dynamically
+        private readonly int loggedInCustomerID;
 
         public frmProfile()
         {
             InitializeComponent();
+
+            // Securely grab the ID stored during the login stage
+            loggedInCustomerID = frmLogIn.LoggedInCustID;
+
             // The color for the upper part of the Form
             this.Style = MetroFramework.MetroColorStyle.Pink;
         }
