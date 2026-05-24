@@ -55,6 +55,8 @@
             this.rdoCOD = new System.Windows.Forms.RadioButton();
             this.rdoOnlinePayment = new System.Windows.Forms.RadioButton();
             this.lblSender = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlSender.SuspendLayout();
@@ -66,6 +68,7 @@
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -364,11 +367,32 @@
             this.lblSender.Text = "Payment Confirmation";
             this.lblSender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(262, 110);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(565, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(775, 149);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(60, 16);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Payment";
+            // 
             // frmBookPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pnlSender);
             this.Controls.Add(this.panel1);
             this.Name = "frmBookPayment";
@@ -391,7 +415,9 @@
             this.panel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -423,5 +449,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdoCOD;
         private System.Windows.Forms.RadioButton rdoOnlinePayment;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label16;
     }
 }
