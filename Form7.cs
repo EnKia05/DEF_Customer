@@ -180,5 +180,28 @@ namespace DEF_Customer
                 pnlGCash.Visible = false; // Hides GCash inputs
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // 1. Wipe out temporary memory slots from Form 1
+            frmBookDetails1.TempPickupAddress = "";
+            frmBookDetails1.TempRecipientName = "";
+            frmBookDetails1.TempRecipientContact = "";
+            frmBookDetails1.TempDropoffAddress = "";
+
+            // 2. Wipe out temporary memory slots from Form 2
+            frmBookDetails2.TempItemName = "";
+            frmBookDetails2.TempItemDescription = "";
+            frmBookDetails2.TempItemType = "";
+            frmBookDetails2.TempPackageSize = "";
+            frmBookDetails2.TempVehicleType = "";
+
+            // 3. Navigate cleanly back to the Home Dashboard
+            frmHome homeForm = new frmHome();
+            homeForm.Show();
+
+            // 4. Close this form instance completely
+            this.Close();
+        }
     }
 }

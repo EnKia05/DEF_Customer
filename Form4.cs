@@ -169,5 +169,26 @@ namespace DEF_Customer
             nextForm.Show();
             this.Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            // Reset the temporary booking memory slots so they are clean for the next booking
+            TempPickupAddress = "";
+            TempRecipientName = "";
+            TempRecipientContact = "";
+            TempDropoffAddress = "";
+
+            // 2. Wipe out temporary memory slots from Form 2
+            frmBookDetails2.TempItemName = "";
+            frmBookDetails2.TempItemDescription = "";
+            frmBookDetails2.TempItemType = "";
+            frmBookDetails2.TempPackageSize = "";
+            frmBookDetails2.TempVehicleType = "";
+
+            // Show the Home form and close this one
+            frmHome homeForm = new frmHome();
+            homeForm.Show();
+            this.Close(); // Use .Close() instead of .Hide() to properly dispose of this wizard instance
+        }
     }
 }
