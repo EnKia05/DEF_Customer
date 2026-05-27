@@ -96,6 +96,11 @@ namespace DEF_Customer
                                 int numericOrderID = Convert.ToInt32(orderID);
                                 PromptQuickFeedback(numericOrderID);
                             }
+                            else if (currentStatus.Trim() == "Re-Delivery")
+                            {
+                                // Optional: If you need to trigger a specific method or flag for Re-Deliveries, add it here.
+                                // Otherwise, it skips the feedback prompt layer safely and continues rendering the card.
+                            }
                             // -----------------------------------
 
                             // Formats timestamp cleanly for a standard log view
@@ -196,6 +201,11 @@ namespace DEF_Customer
         /// </summary>
         private string GetStandardLogisticsMessage(string status, string orderId, string itemName)
         {
+            if (string.IsNullOrWhiteSpace(status))
+            {
+                return $"Order #{orderId} [{itemName}] status update received.";
+            }
+
             switch (status.Trim())
             {
                 case "Pending":
@@ -206,6 +216,9 @@ namespace DEF_Customer
 
                 case "On the Way":
                     return $"Rider is now en route! Your package for Order #{orderId} is actively moving toward its destination.";
+
+                case "Re-Delivery":
+                    return $"Notice: A re-delivery attempt has been scheduled for Order #{orderId} [{itemName}]. Our rider will attempt to deliver your package again shortly.";
 
                 case "Completed":
                     return $"Parcel delivered successfully! Order #{orderId} [{itemName}] has been marked as received. Thank you!";
