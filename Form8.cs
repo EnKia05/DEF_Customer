@@ -50,12 +50,46 @@ namespace DEF_Customer
             // Simple safety check: if for some reason login state is 0, fallback for debug safety
             if (custID == 0) custID = 1002;
 
+            // ── NEW: UNCOMPLETED FEEDBACK PROMPT PATROL ──
+            // Scans for completed orders that haven't been rated yet, prompting the user before filtering the feed
+            string feedbackCheckQuery = @"
+                SELECT DISTINCT r.deliveryRequestID 
+                FROM DELIVERY_REQUEST r
+                WHERE r.custID = @custID 
+                  AND r.status = 'Completed'
+                  AND NOT EXISTS (
+                      SELECT 1 FROM DELIVERY_FEEDBACK f 
+                      WHERE f.deliveryRequestID = r.deliveryRequestID
+                  );";
+
+            using (SqlConnection checkConn = new SqlConnection(connectionString))
+            using (SqlCommand checkCmd = new SqlCommand(feedbackCheckQuery, checkConn))
+            {
+                checkCmd.Parameters.AddWithValue("@custID", custID);
+                try
+                {
+                    checkConn.Open();
+                    using (SqlDataReader checkReader = checkCmd.ExecuteReader())
+                    {
+                        while (checkReader.Read())
+                        {
+                            int completedOrderID = Convert.ToInt32(checkReader["deliveryRequestID"]);
+                            PromptQuickFeedback(completedOrderID);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Feedback patrol error: {ex.Message}");
+                }
+            }
+
+            // ── RENDER ACTIVE NOTIFICATIONS TIMELINE ──
             int startY = 15;
             int cardSpacing = 12;
-            // Locks width tightly inside the placeholder container, subtracting space for the scrollbar gutter
             int cardWidth = pnlNotificationPlaceholder.Width - 25;
 
-            // Query references the clean notification log linked directly back to operational requests
+            // Query filters out terminal states to keep the active feed clean, while keeping histories safe in the DB
             string query = @"
                 SELECT n.notificationID, 
                        n.deliveryRequestID, 
@@ -66,6 +100,7 @@ namespace DEF_Customer
                 FROM CUSTOMER_NOTIFICATION n
                 INNER JOIN DELIVERY_REQUEST r ON n.deliveryRequestID = r.deliveryRequestID
                 WHERE n.custID = @custID
+                  AND r.status NOT IN ('Completed', 'Cancelled')
                 ORDER BY n.createdAt DESC;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -89,25 +124,9 @@ namespace DEF_Customer
                             string currentStatus = reader["DeliveryStatus"].ToString();
                             string itemName = reader["itemName"].ToString();
 
-                            // --- ADD THIS TRIGGER LAYER HERE ---
-                            if (currentStatus.Trim() == "Completed")
-                            {
-                                // Convert string ID to int and pass it to your prompt layer
-                                int numericOrderID = Convert.ToInt32(orderID);
-                                PromptQuickFeedback(numericOrderID);
-                            }
-                            else if (currentStatus.Trim() == "Re-Delivery")
-                            {
-                                // Optional: If you need to trigger a specific method or flag for Re-Deliveries, add it here.
-                                // Otherwise, it skips the feedback prompt layer safely and continues rendering the card.
-                            }
-                            // -----------------------------------
-
-                            // Formats timestamp cleanly for a standard log view
                             DateTime timeStamp = Convert.ToDateTime(reader["createdAt"]);
                             string displayTime = timeStamp.ToString("yyyy-MM-dd hh:mm tt");
 
-                            // Generates industry standard logistics updates dynamically on the fly
                             string dynamicMessage = GetStandardLogisticsMessage(currentStatus, orderID, itemName);
 
                             // ── Card Container Layout ──
@@ -164,16 +183,13 @@ namespace DEF_Customer
                                 AutoEllipsis = true
                             };
 
-                            // Assemble components into the card
                             card.Controls.Add(titleBar);
                             card.Controls.Add(lblMessage);
 
-                            // Append complete card down into the targeted UI container panel
                             pnlNotificationPlaceholder.Controls.Add(card);
                             startY += card.Height + cardSpacing;
                         }
 
-                        // Fallback UI view state empty logger
                         if (!hasAny)
                         {
                             Label lblEmpty = new Label
